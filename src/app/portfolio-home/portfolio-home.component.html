@@ -1,0 +1,481 @@
+<div class="flex h-screen">
+    <!-- Sidebar -->
+    <div class="relative">
+        <!-- Hamburger Icon for Mobile -->
+        <button class="lg:hidden fixed top-4 left-4 z-20 text-white bg-[#4c4c4c91] p-2 rounded focus:outline-none z-40"
+            (click)="toggleSidebar()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+
+        <!-- Sidebar -->
+        <aside
+            class="side-bar w-1/4 lg:w-1/6 bg-[#1f1f1f] text-white fixed h-full flex flex-col items-center p-4 z-30 overflow-auto transform lg:translate-x-0 transition-transform duration-300"
+            [ngClass]="{ '-translate-x-full': !isSidebarOpen, 'translate-x-0': isSidebarOpen }">
+            <!-- Profile Image -->
+            <div class="mb-8 flex flex-col justify-center items-center">
+                <img src="./assets/pDP.jpeg" alt="Profile"
+                    class="dp rounded-full w-[185px] h-[185px] border-4 border-gray-600 object-cover" />
+                <div class="flex justify-center flex-col items-center mt-[1rem]">
+                    <p class="text-[1.5rem] text-bold ">Fazeel Malik</p>
+                    <p class="text-[0.75rem] font-light">Web Developer</p>
+                    <div class="mt-4 flex space-x-6">
+                        <!-- LinkedIn Icon -->
+                        <a href="https://www.linkedin.com/in/fazeel-malik-087a56221" target="_blank"
+                            rel="noopener noreferrer" class="text-[#e5e7eb] hover:text-blue-700 duration-700">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Tabs -->
+            <nav class="flex flex-col gap-4 w-full text-center">
+                <a href="#about"
+                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
+                    About
+                </a>
+                <a href="#expertise"
+                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
+                    Expertise
+                </a>
+
+                <a href="#education"
+                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
+                    Education
+                </a>
+                <a href="#workExperience"
+                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
+                    Work Experience
+                </a>
+                <a href="#projects"
+                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
+                    Projects
+                </a>
+                <a href="#skills"
+                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
+                    Skills
+                </a>
+                <a href="#C&A"
+                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
+                    Highlights
+                </a>
+                <a href="#hobbies-languages"
+                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
+                    Pursuits
+                </a>
+                <a href="#contact"
+                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
+                    Contact
+                </a>
+            </nav>
+        </aside>
+    </div>
+
+    <!-- Main Content -->
+    <main class="ml-[25%] lg:ml-[16.666%] flex-1 p-8 main-div">
+        <section class="border-b border-[#1f1f1f] relative ">
+            <div class="moving-line"></div>
+            <div class="flex w-[100%] justify-center items-center">
+
+                <div class="w-[50%]  animate-slideInLeft banner-content">
+                    <!-- For Font Awesome Free -->
+
+                    <div class="flex flex-col items-center justify-center">
+                        <i class="fa fa-code banner-icon" style="color: #dddddd; font-size: 4rem; padding: 1rem; "></i>
+                        <h4 class="text-[0.75rem] font-light">Turning Ideas Into Reality</h4>
+                    </div>
+                    <div class="w-full flex justify-center items-center">
+                        <div class="border-t-4 border-[#1f1f1f] my-6 mx-10 w-[20%]"></div>
+                    </div>
+                    <h1 class="text-[1.80rem] text-center">A Digital Storyteller Bringing Designs to Life</h1>
+                    <p class="text-[1.25rem] pt-4 font-light text-justify">A passionate and detail-oriented developer
+                        dedicated to
+                        crafting clean, efficient, and scalable code. I thrive on building stunning, user-focused web
+                        experiences that leave a lasting impact.</p>
+                    <div class="flex items-center justify-end gap-2 mt-3 banner-btn">
+                        <a href="#about"
+                            class="border-2 rounded-lg border-[#1f1f1f] hover:bg-[#1f1f1f] hover:border-[#00bcd9] p-4 duration-700">See
+                            Portfolio</a>
+                        <a href="/assets/Fazeel-Malik.pdf" download="Fazeel-Malik.pdf"
+                            class="border-2 rounded-lg border-[#1f1f1f] hover:bg-[#1f1f1f] hover:border-[#00bcd9] p-4 duration-700">Download
+                            CV</a>
+                    </div>
+                </div>
+                <div class="w-[50%] animate-slideInRight banner-img">
+                    <img src="./assets/banner-image.jpeg">
+                </div>
+            </div>
+        </section>
+        <section id="about" class="min-h-fit">
+            <div>
+                <h3 class="text-[1rem] mb-4 mt-4 font-light uppercase animate-up">About</h3>
+                <h1 class="text-[2rem] uppercase animate-up">Who Am I?</h1>
+            </div>
+            <div>
+                <p class="text-[1.25rem] mb-6  text-justify font-light animate-up">
+                    I am a passionate and driven web developer with a keen eye for detail. My journey in web development
+                    began with a fascination for how technology can create seamless user experiences. With expertise in
+                    front-end and back-end technologies, I thrive on turning complex problems into simple, intuitive
+                    solutions. Whether it’s designing a sleek, responsive UI or developing robust functionality, my goal
+                    is
+                    to always deliver high-quality code that brings ideas to life.
+                </p>
+                <p class="text-[1.25rem] text-justify font-light animate-up">
+                    Beyond just coding, I believe in the power of collaboration, continuous learning, and staying up to
+                    date
+                    with the latest trends in the industry. Every project I work on is an opportunity to grow, learn,
+                    and
+                    challenge myself. I am always excited to take on new projects that push my creativity and technical
+                    skills to the next level. Let’s create something amazing together!
+                </p>
+            </div>
+            <div class="mt-5">
+                <div class="cards-container">
+                    <div *ngFor="let card of cards"
+                        class="card hover:-translate-y-2 duration-700 cursor-pointer animate-up"
+                        [ngStyle]="{ 'border-bottom': '2px solid ' + card.color }">
+                        <i [class]="card.icon" [ngClass]="card.color + '-icon'" class="card-icon"></i>
+                        <h2 class="card-title">{{ card.title }}</h2>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="min-h-fit hire mt-[5rem] duration-700 animate-up">
+            <div class="p-5 w-full">
+                <div>
+                    <h1 class="text-[2rem] uppercase animate-up ">Reach Out to Me</h1>
+                    <p class="text-[1.25rem] font-light mt-4 text-justify animate-up">
+                        I'm always open to discussing exciting opportunities, collaborations, and projects. Whether
+                        you're
+                        looking to create a stunning web application or need assistance with your digital presence,
+                        feel
+                        free to reach out. Let's turn your ideas into reality together.
+                    </p>
+                    <p class="text-[1.25rem] font-light mt-2 text-justify animate-up">
+                        Get in touch with me to explore how we can work together and build something amazing.
+                    </p>
+                </div>
+                <div class="mt-[2.5rem] mb-5 animate-up">
+                    <button>
+                        <a href="#contact"
+                            class="border-2 bg-black rounded-lg border-[#1f1f1f] hover:bg-[#1f1f1f] hover:border-[#00bcd9] py-5 px-[2.5rem] duration-700">Hire
+                            Me
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="expertise" class="min-h-fit mt-[5rem]">
+            <h3 class="text-[1rem] mb-4 mt-4 font-light animate-up">WHAT I DO?</h3>
+            <h1 class="text-[2rem] animate-up">HERE ARE SOME OF MY EXPERTISE</h1>
+            <div class="my-[2rem]">
+                <div class="expertise-container">
+                    <div *ngFor="let expertisecard of expertiseCards"
+                        class="expertise hover:-translate-y-2 duration-700 cursor-pointer animate-up"
+                        [ngStyle]="{ 'border-bottom': '2px solid ' + expertisecard.color }">
+                        <div class="hexagon" [ngStyle]="{ 'background-color': expertisecard.color }">
+                            <i [class]="expertisecard.icon" class="hex-icon"></i>
+                        </div>
+                        <h2 class="expertise-title">{{ expertisecard.title }}</h2>
+                        <p class="expertise-description">{{ expertisecard.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="education" class="min-h-fit my-[5rem]">
+            <h3 class="text-[1rem] mb-4 mt-4 font-light animate-up">EDUCATION</h3>
+            <h1 class="text-[2rem] uppercase animate-up">Qualifications & Studies</h1>
+            <div class="my-[2rem]">
+                <div class="edu-container">
+                    <div *ngFor="let educard of educationCards"
+                        class="edu hover:-translate-y-2 duration-700 cursor-pointer animate-up"
+                        [ngStyle]="{ 'border-bottom': '2px solid ' + educard.color }">
+                        <div class="hexagon" [ngStyle]="{ 'background-color': educard.color }">
+                            <i [class]="educard.icon" class="hex-icon"></i>
+                        </div>
+                        <h2 class="edu-title">{{ educard.title }}</h2>
+                        <p class="edu-description">{{ educard.description }}</p>
+                        <p class="edu-duration text-[0.875rem] text-gray-500 italic">{{ educard.duration
+                            }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="workExperience" class="min-h-fit my-[5rem]">
+            <h3 class="text-[1rem] my-4 font-light animate-up">WORK EXPERIENCE</h3>
+            <h1 class="text-[2rem] uppercase animate-up">My Professional Experience</h1>
+            <div class="my-[2rem]">
+                <div class="experience-container">
+                    <div *ngFor="let experiencecard of workExperienceCards"
+                        class="experience hover:-translate-y-2 duration-700 cursor-pointer animate-up"
+                        [ngStyle]="{ 'border-bottom': '2px solid ' + experiencecard.color }">
+                        <div class="hexagon" [ngStyle]="{ 'background-color': experiencecard.color }">
+                            <i [class]="experiencecard.icon" class="hex-icon"></i>
+                        </div>
+                        <h2 class="experience-title">{{ experiencecard.title }}</h2>
+                        <p class="experience-description">{{ experiencecard.description }}</p>
+                        <p class="experience-duration text-[0.875rem] text-gray-500 italic">{{ experiencecard.duration
+                            }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="min-h-fit my-[5rem]">
+            <h3 class="text-[1rem] my-4 font-light animate-up">PROJECTS</h3>
+            <h1 class="text-[2rem] uppercase animate-up">Projects that Reflect My Skills, Creativity, and Dedication
+            </h1>
+            <div class="my-[2rem]">
+                <div class="pro-container">
+                    <div *ngFor="let procard of projectCards"
+                        class="pro hover:-translate-y-2 duration-700 cursor-pointer animate-up"
+                        [ngStyle]="{ 'border-bottom': '2px solid ' + procard.color }">
+                        <div class="hexagon" [ngStyle]="{ 'background-color': procard.color }">
+                            <i [class]="procard.icon" class="hex-icon"></i>
+                        </div>
+                        <h2 class="pro-title">{{ procard.title }}</h2>
+                        <p class="pro-description">{{ procard.description }}</p>
+                        <p class="pro-duration text-[0.875rem] text-gray-500 italic">{{ procard.duration
+                            }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="min-h-fit my-[5rem]">
+            <h3 class="text-[1rem] my-4 font-light animate-up">SKILLS</h3>
+            <h1 class="text-[2rem] uppercase animate-up">Technical Skills & Proficiency</h1>
+            <div class="skills-section">
+                <h2 class="text-[1.5rem] animate-up">Web Development (Frontend & Backend)</h2>
+                <div class="skills-category">
+                    <div class="skill-bar animate-up" *ngFor="let skill of webDevelopmentSkills; let i = index"
+                        [attr.data-index]="i">
+                        <div class="skill-name">{{ skill.name }}</div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-overlay" [style.width.%]="skill.inView ? skill.percentage : 0"
+                                [style.backgroundColor]="skill.color"></div>
+                        </div>
+                        <span>{{ skill.displayPercentage }}%</span>
+                    </div>
+                </div>
+
+                <h2 class="text-[1.5rem] animate-up">Graphic Designing</h2>
+                <div class="skills-category">
+                    <div class="skill-bar animate-up" *ngFor="let skill of graphicDesigningSkills; let i = index"
+                        [attr.data-index]="i">
+                        <div class="skill-name">{{ skill.name }}</div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-overlay" [style.width.%]="skill.inView ? skill.percentage : 0"
+                                [style.backgroundColor]="skill.color"></div>
+                            <div [ngStyle]="{'background-color': skill.color}"></div>
+                        </div>
+                        <span>{{ skill.displayPercentage }}%</span>
+                    </div>
+                </div>
+
+                <h2 class="text-[1.5rem] animate-up">Social Media</h2>
+                <div class="skills-category">
+                    <div class="skill-bar animate-up" *ngFor="let skill of socialMediaSkills; let i = index"
+                        [attr.data-index]="i">
+                        <div class="skill-name">{{ skill.name }}</div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-overlay" [style.width.%]="skill.inView ? skill.percentage : 0"
+                                [style.backgroundColor]="skill.color"></div>
+                            <div [ngStyle]="{'background-color': skill.color}"></div>
+                        </div>
+                        <span>{{ skill.displayPercentage }}%</span>
+                    </div>
+                </div>
+
+                <h2 class="text-[1.5rem] animate-up">Programming Languages</h2>
+                <div class="skills-category">
+                    <div class="skill-bar animate-up" *ngFor="let skill of programmingLanguagesSkills; let i = index"
+                        [attr.data-index]="i">
+                        <div class="skill-name">{{ skill.name }}</div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-overlay" [style.width.%]="skill.inView ? skill.percentage : 0"
+                                [style.backgroundColor]="skill.color"></div>
+                            <div [ngStyle]="{'background-color': skill.color}"></div>
+                        </div>
+                        <span>{{ skill.displayPercentage }}%</span>
+                    </div>
+                </div>
+
+                <h2 class="text-[1.5rem] animate-up">Tools & Framework</h2>
+                <div class="skills-category">
+                    <div class="skill-bar animate-up" *ngFor="let skill of toolsAndFrameworksSkills; let i = index"
+                        [attr.data-index]="i">
+                        <div class="skill-name">{{ skill.name }}</div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-overlay" [style.width.%]="skill.inView ? skill.percentage : 0"
+                                [style.backgroundColor]="skill.color"></div>
+                            <div [ngStyle]="{'background-color': skill.color}"></div>
+                        </div>
+                        <span>{{ skill.displayPercentage }}%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="C&A" class="min-h-fit mt-[5rem]">
+            <h3 class="text-[1rem] mb-4 mt-4 font-light animate-up">HIGHLIGHTS</h3>
+            <h1 class="text-[2rem] animate-up">CERTIFICATIONS & ACHIEVEMENTS</h1>
+            <div class="my-[2rem]">
+                <h2 class="text-[1.5rem] pt-4 animate-up">Certifications</h2>
+                <div class="highlight-container mt-[3rem]">
+                    <div *ngFor="let certification of certifications"
+                        class="highlight hover:-translate-y-2 duration-700 cursor-pointer animate-up"
+                        [ngStyle]="{ 'border-bottom': '2px solid ' + certification.color }">
+                        <div class="hexagon" [ngStyle]="{ 'background-color': certification.color }">
+                            <i [class]="certification.icon" class="hex-icon"></i>
+                        </div>
+                        <h2 class="highlight-title">{{ certification.title }}</h2>
+                        <p class="highlight-description">{{ certification.organization }} ({{ certification.date }})</p>
+                    </div>
+                </div>
+                <h2 class="text-[1.5rem] pt-4 animate-up">Achievements</h2>
+                <div class="highlight-container mt-[3rem]">
+                    <div *ngFor="let achievement of achievements"
+                        class="highlight hover:-translate-y-2 duration-700 cursor-pointer animate-up"
+                        [ngStyle]="{ 'border-bottom': '2px solid ' + achievement.color }">
+                        <div class="hexagon" [ngStyle]="{ 'background-color': achievement.color }">
+                            <i [class]="achievement.icon" class="hex-icon"></i>
+                        </div>
+                        <h2 class="highlight-title">{{ achievement.title }}</h2>
+                        <p class="highlight-description">{{ achievement.description }} ({{ achievement.date }})</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="hobbies-languages" class="min-h-fit mt-[5rem]">
+            <h3 class="text-[1rem] font-light animate-up">Hobbies & Languages</h3>
+            <h1 class="text-[2rem] uppercase animate-up">Passions and Language Proficiency</h1>
+            <div class="flex gap-10 py-4 flex-wrap animate-up">
+                <h2 class="text-[1.5rem] pt-4 ">Hobbies</h2>
+                <div class="bubble">
+                    <span class="bubble-text">Cricket</span>
+                    <div class="bubble-content">
+                        <h4>Cricket</h4>
+                        <span>Enjoy playing cricket with friends and participating in local matches. Passionate about
+                            fast
+                            bowling.</span>
+                    </div>
+                </div>
+
+                <!-- Football Hobby -->
+                <div class="bubble">
+                    <span class="bubble-text">Football</span>
+                    <div class="bubble-content">
+                        <h4>Football</h4>
+                        <span>Enjoy both watching and playing with friends on weekends.</span>
+                    </div>
+                </div>
+
+                <!-- Running Hobby -->
+                <div class="bubble">
+                    <span class="bubble-text">Running</span>
+                    <div class="bubble-content">
+                        <h4>Running</h4>
+                        <span>Running is a great way to clear my mind. I enjoy early morning and evening runs.</span>
+                    </div>
+                </div>
+
+                <!-- Listening to Music Hobby -->
+                <div class="bubble">
+                    <span class="bubble-text">Music</span>
+                    <div class="bubble-content">
+                        <h4>Listening to Music</h4>
+                        <span>A huge fan of different genres, especially hiphop. Music is a great way to unwind after a
+                            busy day.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-10 py-4 flex-wrap animate-up">
+                <h2 class="text-[1.5rem] pt-4">Languages</h2>
+                <div class="bubble">
+                    <span class="bubble-text">English</span>
+                    <div class="bubble-content">
+                        <h4>English</h4>
+                        <span>Professional Working Proficiency. Comfortable with both written and spoken English in
+                            professional settings.</span>
+                    </div>
+                </div>
+
+                <!-- Urdu Language (Native) -->
+                <div class="bubble">
+                    <span class="bubble-text">Urdu</span>
+                    <div class="bubble-content">
+                        <h4>Urdu</h4>
+                        <span>Native Language. Fluent in both written and spoken Urdu, my first language since
+                            childhood.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="min-h-screen  mt-[5rem]">
+            <h3 class="text-[1rem] font-light animate-up">Contact</h3>
+            <h2 class="text-[2rem] uppercase animate-up">Ask Your Queries</h2>
+            <div
+                class="px-4 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-4 py-16 mx-auto   rounded-lg ">
+                <div class="flex flex-col justify-between">
+                    <div>
+                        <div class=" mt-8 animate-up" style="font-size: 15px;">
+                            <p>Contact us! Through emails or Phone Calls and SMS</p>
+                        </div>
+                        <div style="border-top:1px solid black; margin-top: 3rem;" style="font-size: 14px;">
+                            <div class="flex items-center py-2 mt-14 animate-up">
+                                <mat-icon class=""> location_on</mat-icon>
+                                <p class="px-2 text-gray-300 m-0">Lahore, Pakistan</p>
+                            </div>
+                            <div class="flex items-center py-2 animate-up">
+                                <mat-icon class="">email</mat-icon>
+                                <p class="px-2 text-gray-300 mx-0">fazeelmalik444&#64;gmail.com</p>
+                            </div>
+                            <div class="flex items-center py-2 animate-up">
+                                <mat-icon class="">phone</mat-icon>
+                                <p class="px-2 text-gray-300 m-0">+92 327-4944790</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form [formGroup]="contactForm" class="animate-up">
+                        <div>
+
+                            <p for="email" class="block py-2 text-sm font-medium  dark:text-white">Full
+                                Name</p>
+                            <input type="text" name="from_name" formControlName="from_name"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                placeholder="John Doe">
+                        </div>
+                        <div class="mt-8">
+                            <p for="email" class="block py-2 text-sm font-medium  dark:text-white">Email</p>
+                            <input type="email" name="name" formControlName="email"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                placeholder="abc@gmail.com">
+                        </div>
+                        <div class="mt-8">
+                            <p for="message" class="block py-2 text-sm font-medium  dark:text-white">Message</p>
+                            <textarea formControlName="message" rows="5"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                placeholder="Write your message..."></textarea>
+                        </div>
+                        <div class="mt-8 w-full">
+                            <button (click)="send()"
+                                class="w-full border-2 rounded-lg border-[#1f1f1f] hover:bg-[#1f1f1f] hover:border-[#00bcd9] p-4 duration-700">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>

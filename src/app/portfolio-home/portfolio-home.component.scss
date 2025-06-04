@@ -1,0 +1,501 @@
+a,
+p,
+button, span {
+    font-family: 'Quicksand', Arial, sans-serif !important;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', Georgia, serif !important;
+}
+
+.mat-typography {
+    font-family: unset;
+    font-size: unset;
+    font-weight: unset;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    letter-spacing: .0125em;
+    margin: 0 0 0px;
+
+}
+
+/* Create the moving line */
+.moving-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00bcd9;
+    animation: moveBorder 2s linear infinite;
+}
+
+@keyframes moveBorder {
+    0% {
+        width: 0;
+        left: 0;
+    }
+
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+
+//sidebar-scroller
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3b3b3b;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #dddddd;
+}
+
+//about
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background-color: #1f1f1f;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.blue-icon {
+    color: #00bcd9;
+    border-bottom: 1px solid #00bcd9;
+}
+
+.red-icon {
+    color: red;
+}
+
+.yellow-icon {
+    color: yellow;
+}
+
+.purple-icon {
+    color: purple;
+}
+
+//hire
+.hire {
+    background: #4a4a4a69;
+    background-image: url(/assets/dotted-sq.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 40%;
+    background-attachment: fixed;
+}
+
+//expertise
+.expertise-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.expertise {
+    background-color: #1f1f1f;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.hexagon {
+    width: 75px;
+    height: 75px;
+    background-color: #ccc;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -50px;
+}
+
+.hex-icon {
+    color: white;
+    font-size: 24px;
+}
+
+.expertise-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.expertise-description {
+    font-size: 0.9rem;
+}
+
+
+//experience /edu/projects
+.experience-container,
+.edu-container,
+.highlight-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.pro-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.experience,
+.edu,
+.pro,
+.highlight {
+    background: #1f1f1f;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 calc(45% - 1rem);
+    max-width: calc(45% - 1rem);
+    min-width: 300px;
+}
+
+.hexagon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin: 0 auto 1rem;
+}
+
+.hex-icon {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.experience-title,
+.edu-title,
+.pro-title,
+.highlight-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.experience-description,
+.edu-description,
+.pro-description,
+.highlight-description {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-duration,
+.edu-duration,
+.pro-duration {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.skills-category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.skill-name {
+    width: 100%;
+    font-weight: bold;
+}
+
+.skills-category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.skill-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 30%;
+}
+
+.skill-name {
+    font-weight: bold;
+}
+
+.skill-bar-container {
+    width: 100%;
+    background-color: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.skill-bar-overlay {
+    height: 100%;
+    border-radius: 5px;
+    position: absolute;
+    width: 0%;
+    transition: width 3s ease-out;
+    /* Smooth animation */
+}
+
+span {
+    font-size: 0.875rem;
+}
+
+.bubble {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: #00bcd9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.bubble:hover {
+    width: 200px;
+    height: 165px;
+    border-radius: 10px;
+    /* Making it a square with rounded corners */
+    transform: scale(1.05);
+}
+
+.bubble-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    visibility: visible;
+    transition: visibility 0.3s ease;
+    padding: 0px !important;
+    margin: 0 !important;
+}
+
+.bubble-content {
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.bubble:hover .bubble-text {
+    visibility: hidden;
+    /* Hides the initial text when the bubble is transformed */
+}
+
+.bubble:hover .bubble-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.bubble-content h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.bubble-content p {
+    font-size: 0.9rem;
+    font-weight: light;
+    margin-top: 5px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    .skill-bar {
+        width: 45%;
+        /* 2 skills per row for medium screens */
+    }
+
+    .main-div {
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .skill-bar {
+        width: 100%;
+        /* 1 skill per row for small screens */
+    }
+
+    .side-bar {
+        width: 100%;
+    }
+
+    .dp {
+        height: 140px;
+        width: 140px;
+    }
+
+
+}
+
+@media (max-width: 684px) {
+    .banner-img {
+        display: none;
+        width: 0%;
+    }
+
+    .banner-content {
+        width: 100%;
+    }
+
+    .banner-btn {
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .banner-icon {
+        font-size: 2rem !important;
+    }
+}
+
+@media (max-width: 500px) {
+
+    h1,
+    h2,
+    h3,
+    p,
+    button {
+        text-align: center !important;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 0.85rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 1284px) {
+    .dp {
+        height: 120px;
+        width: 120px;
+    }
+}
+
+@media (max-width: 640px) {
+    .dp {
+        height: 120px;
+        width: 120px;
+    }
+}
+
+@media (max-width: 544px) {
+    .expertise {
+        width: 80%;
+    }
+}
+
+@media (max-width: 680px) {
+
+    .edu,
+    .experience,
+    .pro,
+    .highlight {
+        max-width: calc(100% - 1rem);
+        margin: 1rem 0rem;
+    }
+}
+
+@media (max-width: 744px) {
+    .pro {
+        max-width: calc(100% - 1rem);
+        margin: 1rem 0rem;
+    }
+}
+
+.animate-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.animate-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
