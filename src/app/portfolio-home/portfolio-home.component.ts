@@ -29,7 +29,7 @@ export class PortfolioHomeComponent {
     {
       icon: 'fa-solid fa-code',
       title: 'Web Development',
-      description: 'Experienced in HTML, CSS, JS, Angular, Node.js, Express, Python, Django, WordPress, Shopify and more.',
+      description: 'Experienced in HTML, CSS, JS, Angular, ReactJs, NextJs, NestJs, GraphQL, Node.js, Express, Mongoose, MySQL, Python, Django, WordPress, Shopify and more.',
       color: '#4CAF50' // Green
     },
     {
@@ -55,34 +55,34 @@ export class PortfolioHomeComponent {
   workExperienceCards = [
     {
       icon: 'fas fa-laptop-code', // Example Font Awesome icon for frontend development
-      title: 'Web Frontend Intern',
+      title: 'Fullstack Developer',
       description:
-        'Worked at Smart Moves Lab (Lahore, Pakistan) as a frontend intern, gaining expertise in HTML, CSS, Bootstrap, Tailwind, JS, Angular, and GitHub.',
-      duration: 'Jan 2023 - Mar 2023',
+        'Worked at Smart Moves Lab (Lahore, Pakistan) as a Fullstack developer where I developed multiple websites using Angular, ReactJS,NextJs for the frontend and Node.js,NestJs,NextJs,Graphql for the backend, focusing on responsive design and user experience.',
+      duration: 'Mar 2021 - Oct 2024',
       color: '#1E90FF', // Blue for this card
     },
     {
       icon: 'fas fa-project-diagram', // Example Font Awesome icon for project work
-      title: 'Frontend Developer',
+      title: 'Fullstack Developer',
       description:
-        'Employed at Smart Moves Lab (Lahore, Pakistan) where I worked on company Angular projects, completed daily tasks, created UI modules, and integrated functionality.',
-      duration: 'Sep 2023 - Jul 2024',
+        'Worked at Tech Cog (pvt) ltd (Lahore, Pakistan) as a Fullstack developer where I developed multiple websites using Angular, ReactJS,NextJs for the frontend and Node.js,NestJs,NextJs,Graphql for the backend, focusing on responsive design and user experience.Manage and lead a team of developers to deliver high-quality software solutions on time and within budget.',
+      duration: 'Nov 2024 - Jun 2025',
       color: '#FF6347', // Red for this card
     },
   ];
 
   educationCards = [
     {
-      title: "FSC Pre-Engineering",
-      description: "Completed FSC Pre-Engineering from Unique College Lahore, Pakistan.",
-      duration: "09/2018 - 07/2020",
+      title: "ICS",
+      description: "Completed ICS from Unique College Lahore, Pakistan.",
+      duration: "09/2014 - 07/2016",
       color: "#4CAF50", // Green (or any color you prefer)
       icon: "fa fa-graduation-cap" // or any other icon you choose
     },
     {
       title: "Bachelor of Science in Software Engineering",
-      description: "Pursuing Bachelor of Science in Software Engineering at the University of Lahore.",
-      duration: "09/2020 - 07/2024",
+      description: "Pursuing Bachelor of Science in Software Engineering at the Virtual University.",
+      duration: "09/2017 - 07/2021",
       color: "#2196F3", // Blue (or any color you prefer)
       icon: "fa fa-graduation-cap" // or any other icon you choose
     }
@@ -90,18 +90,39 @@ export class PortfolioHomeComponent {
 
   projectCards = [
     {
-      title: 'Lights Bazaar',
-      description: 'An e-commerce website for selling neon signs.',
+      title: 'OSMOS',
+      description: 'A sales automation website.',
       color: 'blue',
       icon: 'fas fa-store',  // Add icon class here
-      duration: '05/23 - 05/24'
+      duration: '05/21 - Present'
     },
     {
-      title: 'Opexa UK',
-      description: 'A wholesale website tailored to UK-based customers.',
+      title: 'Togal ai',
+      description: 'A open ai chat modal website.',
       color: 'green',
       icon: 'fas fa-box',  // Add icon class here
-      duration: '07/23 - 07/24 (For Client)'
+      duration: '01/24 - 01/25 (For Client)'
+    },
+    {
+      title: 'StartHub',
+      description: 'A open ai chat modal website.',
+      color: 'green',
+      icon: 'fas fa-box',  // Add icon class here
+      duration: '04/25 - Present'
+    },
+    {
+      title: 'Banglow map',
+      description: 'The website Tasking by Banglow map offers advanced geospatial monitoring and satellite imaging services.',
+      color: 'green',
+      icon: 'fas fa-box',  // Add icon class here
+      duration: '05/24 - Present'
+    },
+    {
+      title: 'Clinvise ',
+      description: 'A time tracker website.',
+      color: 'green',
+      icon: 'fas fa-box',  // Add icon class here
+      duration: '05/25 - Present (For Client)'
     },
     {
       title: 'AmazonSpace UK',
@@ -148,14 +169,17 @@ export class PortfolioHomeComponent {
   ];
 
   webDevelopmentSkills = [
-    { name: 'HTML', percentage: 90, color: '#E34F26', inView: false, displayPercentage: 0 },
-    { name: 'CSS', percentage: 90, color: '#563D7C', inView: false, displayPercentage: 0 },
-    { name: 'Bootstrap', percentage: 90, color: '#1572B6', inView: false, displayPercentage: 0 },
-    { name: 'Tailwind', percentage: 90, color: '#38B2AC', inView: false, displayPercentage: 0 },
-    { name: 'Node.js', percentage: 70, color: '#8CC84B', inView: false, displayPercentage: 0 },
-    { name: 'Express', percentage: 70, color: '#00ff7b', inView: false, displayPercentage: 0 },
-    { name: 'MySQL', percentage: 70, color: '#4479A1', inView: false, displayPercentage: 0 },
-    { name: 'Machine Learning', percentage: 70, color: '#8E44AD', inView: false, displayPercentage: 0 }
+    { name: 'HTML', percentage: 95, color: '#E34F26', inView: false, displayPercentage: 0 },
+    { name: 'CSS', percentage: 95, color: '#563D7C', inView: false, displayPercentage: 0 },
+    { name: 'Bootstrap', percentage: 95, color: '#1572B6', inView: false, displayPercentage: 0 },
+    { name: 'Tailwind', percentage: 95, color: '#38B2AC', inView: false, displayPercentage: 0 },
+    
+    { name: 'NextJs', percentage: 90, color: '#38B2AC', inView: false, displayPercentage: 0 },
+    { name: 'Graphql', percentage: 85, color: '#38B2AC', inView: false, displayPercentage: 0 },
+    { name: 'Node.js', percentage: 90, color: '#8CC84B', inView: false, displayPercentage: 0 },
+    { name: 'Express', percentage: 90, color: '#00ff7b', inView: false, displayPercentage: 0 },
+    { name: 'MySQL', percentage: 90, color: '#4479A1', inView: false, displayPercentage: 0 },
+    { name: 'Machine Learning', percentage: 80, color: '#8E44AD', inView: false, displayPercentage: 0 }
   ];
 
   graphicDesigningSkills = [
@@ -170,19 +194,22 @@ export class PortfolioHomeComponent {
   ];
 
   programmingLanguagesSkills = [
-    { name: 'Javascript', percentage: 80, color: '#F7DF1E', inView: false, displayPercentage: 0 },
-    { name: 'Typescript', percentage: 80, color: '#3178C6', inView: false, displayPercentage: 0 },
-    { name: 'Python', percentage: 70, color: '#3776AB', inView: false, displayPercentage: 0 }
+    { name: 'Javascript', percentage: 90, color: '#F7DF1E', inView: false, displayPercentage: 0 },
+    { name: 'Typescript', percentage: 90, color: '#3178C6', inView: false, displayPercentage: 0 },
+    { name: 'Python', percentage: 80, color: '#3776AB', inView: false, displayPercentage: 0 }
   ];
 
   toolsAndFrameworksSkills = [
-    { name: 'Angular', percentage: 80, color: '#DD0031', inView: false, displayPercentage: 0 },
+    { name: 'Angular', percentage: 95, color: '#DD0031', inView: false, displayPercentage: 0 },
     { name: 'Django', percentage: 70, color: '#092E20', inView: false, displayPercentage: 0 },
     { name: 'Adobe XD', percentage: 75, color: '#FF61F6', inView: false, displayPercentage: 0 },
-    { name: 'Figma', percentage: 70, color: '#F24E1E', inView: false, displayPercentage: 0 },
+    { name: 'Figma', percentage: 80, color: '#F24E1E', inView: false, displayPercentage: 0 },
+    { name: 'Angular', percentage: 95, color: '#38B2AC', inView: false, displayPercentage: 0 },
+    { name: 'React', percentage: 90, color: '#38B2AC', inView: false, displayPercentage: 0 },
+    { name: 'NestJs', percentage: 95, color: '#38B2AC', inView: false, displayPercentage: 0 },
     { name: 'Illustrator', percentage: 70, color: '#ff9a00', inView: false, displayPercentage: 0 },
-    { name: 'WordPress', percentage: 80, color: '#21759B', inView: false, displayPercentage: 0 },
-    { name: 'Shopify', percentage: 80, color: '#21759B', inView: false, displayPercentage: 0 },
+    { name: 'WordPress', percentage: 90, color: '#21759B', inView: false, displayPercentage: 0 },
+    { name: 'Shopify', percentage: 86, color: '#21759B', inView: false, displayPercentage: 0 },
   ];
   certifications = [
     {
