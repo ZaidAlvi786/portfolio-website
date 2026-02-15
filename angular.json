@@ -25,9 +25,6 @@
               "rxjs",
               "@emailjs/browser"
             ],
-            "externalDependencies": [
-              "rxjs"
-            ],
             "polyfills": [
               "zone.js"
             ],
