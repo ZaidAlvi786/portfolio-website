@@ -19,11 +19,11 @@
                 <img src="./assets/profile-modified.jpeg" alt="Profile"
                     class="dp rounded-full w-[185px] h-[185px] border-4 border-gray-600 object-cover" />
                 <div class="flex justify-center flex-col items-center mt-[1rem]">
-                    <p class="text-[1.5rem] text-bold ">Zaid Alvi</p>
-                    <p class="text-[0.75rem] font-light">FullStack Developer</p>
+                    <p class="text-[1.3rem] text-bold ">Kashif Hussain Alvi</p>
+                    <p class="text-[0.72rem] font-light">Operations & Administration Manager</p>
                     <div class="mt-4 flex space-x-6">
                         <!-- LinkedIn Icon -->
-                        <a href="https://www.linkedin.com/in/zaid-alvi-b37783145/" target="_blank"
+                        <a href="https://www.linkedin.com/in/kashif-hussain-alvi-358357137/" target="_blank"
                             rel="noopener noreferrer" class="text-[#e5e7eb] hover:text-blue-700 duration-700">
                             <i class="fab fa-linkedin fa-2x"></i>
                         </a>
@@ -84,28 +84,25 @@
                     <!-- For Font Awesome Free -->
 
                     <div class="flex flex-col items-center justify-center">
-                        <i class="fa fa-code banner-icon" style="color: #dddddd; font-size: 4rem; padding: 1rem; "></i>
-                        <h4 class="text-[0.75rem] font-light">Turning Ideas Into Reality</h4>
+                        <i class="fa fa-briefcase banner-icon" style="color: #dddddd; font-size: 4rem; padding: 1rem; "></i>
+                        <h4 class="text-[0.75rem] font-light">Operations • Supply Chain • Fulfilment</h4>
                     </div>
                     <div class="w-full flex justify-center items-center">
                         <div class="border-t-4 border-[#1f1f1f] my-6 mx-10 w-[20%]"></div>
                     </div>
-                    <h1 class="text-[1.80rem] text-center">A Digital Storyteller Bringing Designs to Life</h1>
-                    <p class="text-[1.25rem] pt-4 font-light text-justify">A passionate and detail-oriented developer
-                        dedicated to
-                        crafting clean, efficient, and scalable code. I thrive on building stunning, user-focused web
-                        experiences that leave a lasting impact.</p>
+                    <h1 class="text-[1.80rem] text-center">Executive Portfolio | Driving Operational Excellence</h1>
+                    <p class="text-[1.25rem] pt-4 font-light text-justify">Operations and Administration Manager with 17+ years of experience supporting UK retail and e-commerce operations. Recognised for strong SLA governance and leading cross-functional teams.</p>
                     <div class="flex items-center justify-end gap-2 mt-3 banner-btn">
                         <a href="#about"
                             class="border-2 rounded-lg border-[#1f1f1f] hover:bg-[#1f1f1f] hover:border-[#00bcd9] p-4 duration-700">See
                             Portfolio</a>
-                        <a href="/assets/Fazeel-Malik.pdf" download="Fazeel-Malik.pdf"
+                        <a href="assets/Professional Portfolio – Kashif Hussain Alvi.docx" download="Kashif-Hussain-Alvi-CV.docx"
                             class="border-2 rounded-lg border-[#1f1f1f] hover:bg-[#1f1f1f] hover:border-[#00bcd9] p-4 duration-700">Download
                             CV</a>
                     </div>
                 </div>
-                <div class="w-[50%] animate-slideInRight banner-img">
-                    <img src="./assets/profile-modified.jpeg">
+                <div class="w-[50%] animate-slideInRight banner-img justify-end flex">
+                    <img width="50%" src="./assets/profile-modified.jpeg">
                 </div>
             </div>
         </section>
@@ -116,20 +113,10 @@
             </div>
             <div>
                 <p class="text-[1.25rem] mb-6  text-justify font-light animate-up">
-                    I am a passionate and driven web developer with a keen eye for detail. My journey in web development
-                    began with a fascination for how technology can create seamless user experiences. With expertise in
-                    front-end and back-end technologies, I thrive on turning complex problems into simple, intuitive
-                    solutions. Whether it’s designing a sleek, responsive UI or developing robust functionality, my goal
-                    is
-                    to always deliver high-quality code that brings ideas to life.
+                    I am an Operations and Administration Manager with over 17 years of experience supporting UK retail and e-commerce giants. My expertise spans third-party customer services, buying & merchandising support, purchase order management, and end-to-end supply chain delivery. I am recognised for my ability to manage high-volume environments through strong SLA governance and KPI-driven execution.
                 </p>
                 <p class="text-[1.25rem] text-justify font-light animate-up">
-                    Beyond just coding, I believe in the power of collaboration, continuous learning, and staying up to
-                    date
-                    with the latest trends in the industry. Every project I work on is an opportunity to grow, learn,
-                    and
-                    challenge myself. I am always excited to take on new projects that push my creativity and technical
-                    skills to the next level. Let’s create something amazing together!
+                    Throughout my career, I have led cross-functional teams across warehousing, DC operations, and distribution. I have worked directly with international brands like Matalan, Debenhams, Very, and Secret Sales, ensuring smooth coordination between buying, fulfilment, and supply chain functions. My focus is always on process improvement, SOP compliance, and driving business impact through operational excellence.
                 </p>
             </div>
             <div class="mt-5">
@@ -218,15 +205,19 @@
                         </div>
                         <h2 class="experience-title">{{ experiencecard.title }}</h2>
                         <p class="experience-description">{{ experiencecard.description }}</p>
-                        <p class="experience-duration text-[0.875rem] text-gray-500 italic">{{ experiencecard.duration
-                            }}</p>
+                        <p class="experience-duration text-[0.875rem] text-gray-500 italic">{{ experiencecard.duration }}</p>
+                        <div *ngIf="experiencecard.links && experiencecard.links.length > 0" class="mt-4 flex flex-wrap gap-2 justify-center">
+                            <a *ngFor="let link of experiencecard.links" [href]="link" target="_blank" class="text-blue-500 hover:text-blue-700 underline text-sm">
+                                Visit Website <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="projects" class="min-h-fit my-[5rem]">
             <h3 class="text-[1rem] my-4 font-light animate-up">PROJECTS</h3>
-            <h1 class="text-[2rem] uppercase animate-up">Projects that Reflect My Skills, Creativity, and Dedication
+            <h1 class="text-[2rem] uppercase animate-up">Key Results & Operational Success
             </h1>
             <div class="my-[2rem]">
                 <div class="pro-container">
@@ -247,9 +238,9 @@
 
         <section id="skills" class="min-h-fit my-[5rem]">
             <h3 class="text-[1rem] my-4 font-light animate-up">SKILLS</h3>
-            <h1 class="text-[2rem] uppercase animate-up">Technical Skills & Proficiency</h1>
+            <h1 class="text-[2rem] uppercase animate-up">Operational Skills & Efficiency</h1>
             <div class="skills-section">
-                <h2 class="text-[1.5rem] animate-up">Web Development (Frontend & Backend)</h2>
+                <h2 class="text-[1.5rem] animate-up">Core Operations & Supply Chain</h2>
                 <div class="skills-category">
                     <div class="skill-bar animate-up" *ngFor="let skill of webDevelopmentSkills; let i = index"
                         [attr.data-index]="i">
@@ -262,7 +253,7 @@
                     </div>
                 </div>
 
-                <h2 class="text-[1.5rem] animate-up">Graphic Designing</h2>
+                <h2 class="text-[1.5rem] animate-up">Data & Analytics</h2>
                 <div class="skills-category">
                     <div class="skill-bar animate-up" *ngFor="let skill of graphicDesigningSkills; let i = index"
                         [attr.data-index]="i">
@@ -276,7 +267,7 @@
                     </div>
                 </div>
 
-                <h2 class="text-[1.5rem] animate-up">Social Media</h2>
+                <h2 class="text-[1.5rem] animate-up">Service Delivery</h2>
                 <div class="skills-category">
                     <div class="skill-bar animate-up" *ngFor="let skill of socialMediaSkills; let i = index"
                         [attr.data-index]="i">
@@ -304,7 +295,7 @@
                     </div>
                 </div>
 
-                <h2 class="text-[1.5rem] animate-up">Tools & Framework</h2>
+                <h2 class="text-[1.5rem] animate-up">Professional Systems</h2>
                 <div class="skills-category">
                     <div class="skill-bar animate-up" *ngFor="let skill of toolsAndFrameworksSkills; let i = index"
                         [attr.data-index]="i">
@@ -366,31 +357,19 @@
                     </div>
                 </div>
 
-                <!-- Football Hobby -->
                 <div class="bubble">
-                    <span class="bubble-text">Football</span>
+                    <span class="bubble-text">Operations</span>
                     <div class="bubble-content">
-                        <h4>Football</h4>
-                        <span>Enjoy both watching and playing with friends on weekends.</span>
+                        <h4>Retail & E-commerce</h4>
+                        <span>Keeping up with latest trends in UK retail and e-commerce operations.</span>
                     </div>
                 </div>
 
-                <!-- Running Hobby -->
                 <div class="bubble">
-                    <span class="bubble-text">Running</span>
+                    <span class="bubble-text">Platforms</span>
                     <div class="bubble-content">
-                        <h4>Running</h4>
-                        <span>Running is a great way to clear my mind. I enjoy early morning and evening runs.</span>
-                    </div>
-                </div>
-
-                <!-- Listening to Music Hobby -->
-                <div class="bubble">
-                    <span class="bubble-text">Music</span>
-                    <div class="bubble-content">
-                        <h4>Listening to Music</h4>
-                        <span>A huge fan of different genres, especially hiphop. Music is a great way to unwind after a
-                            busy day.</span>
+                        <h4>Digital Platforms</h4>
+                        <span>Exploring new digital tools and inventory management systems.</span>
                     </div>
                 </div>
             </div>
@@ -411,8 +390,17 @@
                     <span class="bubble-text">Urdu</span>
                     <div class="bubble-content">
                         <h4>Urdu</h4>
-                        <span>Native Language. Fluent in both written and spoken Urdu, my first language since
-                            childhood.
+                        <span>Native Proficiency. My first language, spoken fluently.
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Punjabi Language -->
+                <div class="bubble">
+                    <span class="bubble-text">Punjabi</span>
+                    <div class="bubble-content">
+                        <h4>Punjabi</h4>
+                        <span>Fluent. Comfortable in conversational and professional contexts.
                         </span>
                     </div>
                 </div>
@@ -432,15 +420,15 @@
                         <div style="border-top:1px solid black; margin-top: 3rem;" style="font-size: 14px;">
                             <div class="flex items-center py-2 mt-14 animate-up">
                                 <mat-icon class=""> location_on</mat-icon>
-                                <p class="px-2 text-gray-300 m-0">Lahore, Pakistan</p>
+                                <p class="px-2 text-gray-300 m-0">Pakistan | Open to UK Opportunities</p>
                             </div>
                             <div class="flex items-center py-2 animate-up">
                                 <mat-icon class="">email</mat-icon>
-                                <p class="px-2 text-gray-300 mx-0">zaidalviza786&#64;gmail.com</p>
+                                <p class="px-2 text-gray-300 mx-0">kha.alvi&#64;gmail.com</p>
                             </div>
                             <div class="flex items-center py-2 animate-up">
                                 <mat-icon class="">phone</mat-icon>
-                                <p class="px-2 text-gray-300 m-0">+92 340-4300601</p>
+                                <p class="px-2 text-gray-300 m-0">+92 300 4581516</p>
                             </div>
                         </div>
                     </div>
