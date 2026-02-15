@@ -234,6 +234,55 @@
             </div>
         </section>
 
+        <!-- Managed Services & Operational Solutions -->
+        <section id="services" class="py-24 space-y-20 relative overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/5 blur-[120px] rounded-full -z-10"></div>
+            
+            <div class="text-center space-y-4 px-4">
+                <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">BPO & Strategic Support</h3>
+                <h1 class="text-5xl lg:text-7xl font-bold animate-up">Managed Services & Operational Solutions</h1>
+                <p class="text-slate-500 max-w-2xl mx-auto font-light animate-up">Comprehensive backend, logistics, and customer success management for global retail and digital brands.</p>
+            </div>
+
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                <div *ngFor="let service of managedServices" 
+                    class="group relative p-8 rounded-[40px] bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-blue-500/20 transition-all duration-500 animate-up">
+                    
+                    <div class="space-y-6">
+                        <!-- Header -->
+                        <div class="flex items-center gap-5">
+                            <div class="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-500"
+                                [style.color]="service.color">
+                                <i [class]="service.icon"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">{{ service.title }}</h2>
+                        </div>
+
+                        <!-- Goal -->
+                        <div class="px-4 py-2 rounded-xl bg-blue-500/5 border border-blue-500/10">
+                            <p class="text-xs font-mono text-blue-400 uppercase tracking-tighter">The Goal: {{ service.goal }}</p>
+                        </div>
+
+                        <!-- Features -->
+                        <ul class="space-y-3">
+                            <li *ngFor="let feature of service.features" class="flex gap-3 text-slate-400 text-sm font-light leading-relaxed">
+                                <span class="text-blue-500 mt-1.5 shrink-0"><i class="fas fa-check-circle text-[10px]"></i></span>
+                                <span [innerHTML]="feature"></span>
+                            </li>
+                        </ul>
+
+                        <!-- Highlight for Buying -->
+                        <div *ngIf="service.highlight" class="pt-4 mt-4 border-t border-white/5">
+                            <p class="text-blue-300 font-bold italic text-sm">“{{ service.highlight }}”</p>
+                        </div>
+                    </div>
+
+                    <!-- Decorative Hover Blob -->
+                    <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-blue-500/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+            </div>
+        </section>
+
         <!-- Taskaler Team Solution -->
         <section class="py-32 relative overflow-hidden">
             <div class="absolute inset-0 bg-blue-600/5 blur-[150px] -z-10"></div>

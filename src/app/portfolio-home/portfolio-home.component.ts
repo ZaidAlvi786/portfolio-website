@@ -91,6 +91,85 @@ export class PortfolioHomeComponent {
     }
   ];
 
+  managedServices = [
+    {
+      id: 'cx',
+      title: 'Customer Experience (CX) & Support Strategy',
+      goal: 'Transforming every interaction into a loyalty-building moment.',
+      icon: 'fa-solid fa-headset',
+      color: '#3b82f6',
+      features: [
+        'Omnichannel Support: Email, Live Chat, WhatsApp, and Voice.',
+        'NPS & CSAT Champion: Data-driven strategies to boost scores.',
+        'Escalation Governance: Resolution for Tier-3 technical/billing conflicts.',
+        'SOP Development: Designing the "Playbook" for consistent quality.'
+      ]
+    },
+    {
+      id: 'supply-chain',
+      title: 'Supply Chain, Warehouse & DC Operations',
+      goal: 'Ensuring the right product reaches the right customer, every time.',
+      icon: 'fa-solid fa-truck-ramp-box',
+      color: '#ef4444',
+      features: [
+        'WMS Management: Receiving, inventory slotting, and picking/packing.',
+        'DC Optimization: High-volume flow-through and dispatch coordination.',
+        'Inventory Integrity: Rigorous cycle counting and reconciliation.',
+        'Logistics Coordination: 3PL management & SLA compliance.'
+      ]
+    },
+    {
+      id: 'marketplace',
+      title: 'Global 3rd Party Marketplace Management (3PM)',
+      goal: 'Seamlessly integrating your brand into the world’s largest retailers.',
+      icon: 'fa-solid fa-store',
+      color: '#f59e0b',
+      features: [
+        'Strategic Partners: Compliance for <strong>Matalan</strong>, <strong>Voga</strong>, Secret Sales, Amazon.',
+        'Platform Governance: Managed listing standards & image synchronization.',
+        'International Fulfillment: Cross-border logistics & regional compliance.'
+      ]
+    },
+    {
+      id: 'buying',
+      title: 'Backend Buying & Procurement Administration',
+      goal: 'Acting as the technical engine for your Buying and Merchandising teams.',
+      icon: 'fa-solid fa-database',
+      color: '#a855f7',
+      features: [
+        'System Ingestion: Raw data transformed into ERP/IMS entries.',
+        'PO Management: Precision lifecycle tracking from Draft to Received.',
+        'Master Data Management: Cleaning catalogs to prevent system errors.',
+        'Vendor Liaison: Confirming lead times and order accuracy.'
+      ],
+      highlight: 'You provide the data, we build the system.'
+    },
+    {
+      id: 'digital',
+      title: 'Digital Media & Creative Managed Services',
+      goal: 'Maintaining a cohesive, high-converting digital brand presence.',
+      icon: 'fa-solid fa-palette',
+      color: '#ec4899',
+      features: [
+        'Graphic Design Oversight: Web banners, social assets, and marketing collateral.',
+        'Digital Media Management: Posting schedules and brand engagement.',
+        'UI/UX Feedback: Bridging gap between feedback and web improvements.'
+      ]
+    },
+    {
+      id: 'finance',
+      title: 'Business Infrastructure & Financial Admin',
+      goal: 'Providing the financial and operational backbone for growth.',
+      icon: 'fa-solid fa-chart-pie',
+      color: '#10b981',
+      features: [
+        'Accounts & Finance Support: Payables/Receivables and expense tracking.',
+        'P&L Reporting: Visibility into operational costs and margins.',
+        'Process Automation: Bottenecks solved via Jira, Slack, and ERP.'
+      ]
+    }
+  ];
+
   detailedExperience = [
     {
       company: 'Taskaler (Clothing Brand) – UK',
