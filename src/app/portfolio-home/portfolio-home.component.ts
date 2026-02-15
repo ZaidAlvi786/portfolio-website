@@ -19,229 +19,180 @@ import 'intersection-observer';
 })
 export class PortfolioHomeComponent {
   cards = [
-    { icon: 'fa-solid fa-paintbrush', title: 'Graphic Design', color: 'blue' },
-    { icon: 'fa-solid fa-laptop-code', title: 'Web Development', color: 'red' },
-    { icon: 'fa-solid fa-robot', title: 'Machine Learning', color: 'yellow' },
-    { icon: 'fa-solid fa-chart-line', title: 'Digital Marketing', color: 'purple' }
+    { icon: 'fa-solid fa-truck-ramp-box', title: 'Operations', color: 'blue' },
+    { icon: 'fa-solid fa-boxes-stacked', title: 'Supply Chain', color: 'red' },
+    { icon: 'fa-solid fa-warehouse', title: 'Fulfilment', color: 'yellow' },
+    { icon: 'fa-solid fa-headset', title: 'Customer Services', color: 'purple' }
   ];
 
   expertiseCards = [
     {
-      icon: 'fa-solid fa-code',
-      title: 'Web Development',
-      description: 'Experienced in HTML, CSS, JS, Angular, ReactJs, NextJs, NestJs, GraphQL, Node.js, Express, Mongoose, MySQL, Python, Django, WordPress, Shopify and more.',
-      color: '#4CAF50' // Green
+      icon: 'fa-solid fa-briefcase',
+      title: 'Operations Leadership',
+      description: '17+ years leading multi-functional operations for UK-based retail brands. Expertise in SLA governance and KPI-driven execution.',
+      color: '#4CAF50'
     },
     {
-      icon: 'fa-solid fa-paintbrush',
-      title: 'Graphics Design',
-      description: 'Proficient in UI/UX design, Adobe XD, Figma, Logo Design, and illustrations using Illustrator.',
-      color: '#FF5722' // Red
+      icon: 'fa-solid fa-truck-fast',
+      title: 'Supply Chain & Fulfilment',
+      description: 'Managing end-to-end supply chain delivery, including DC operations, warehousing, distribution, and inventory accuracy.',
+      color: '#FF5722'
     },
     {
-      icon: 'fa-solid fa-robot',
-      title: 'Machine Learning',
-      description: 'Applying ML algorithms to solve problems, building intelligent systems and data-driven models.',
-      color: '#FFEB3B' // Yellow
+      icon: 'fa-solid fa-cart-shopping',
+      title: 'Buying & Merchandising',
+      description: 'Expert support in product setup, PO management, and quantity validation for major UK retailers like Matalan and Debenhams.',
+      color: '#FFEB3B'
     },
     {
-      icon: 'fa-solid fa-bullhorn',
-      title: 'Digital Marketing',
-      description: 'Expertise in SEO, Social Media Management, content strategy, and driving digital campaigns.',
-      color: '#9C27B0' // Purple
+      icon: 'fa-solid fa-comments-dollar',
+      title: 'Customer Service Governance',
+      description: 'Overseeing B2B/B2C services for international brands, ensuring performance standards and high customer satisfaction (NPS Champion).',
+      color: '#9C27B0'
     }
   ];
 
   workExperienceCards = [
     {
-      icon: 'fas fa-laptop-code', // Example Font Awesome icon for frontend development
-      title: 'Fullstack Developer',
-      description:
-        'Worked at Smart Moves Lab (Lahore, Pakistan) as a Fullstack developer where I developed multiple websites using Angular, ReactJS,NextJs for the frontend and Node.js,NestJs,NextJs,Graphql for the backend, focusing on responsive design and user experience.',
-      duration: 'Mar 2021 - Oct 2024',
-      color: '#1E90FF', // Blue for this card
+      icon: 'fas fa-tasks',
+      title: 'Manager – Operations & Administration',
+      description: 'Taskaler (UK Retail Support). Leading multi-functional teams for Customer Services, Buying & Merchandising (Matalan, Debenhams, Very). Managing DC, warehousing, and end-to-end supply chain coordination.',
+      duration: 'Mar 2021 – Present',
+      links: ['https://taskaler.com/'],
+      color: '#1E90FF',
     },
     {
-      icon: 'fas fa-project-diagram', // Example Font Awesome icon for project work
-      title: 'Fullstack Developer',
-      description:
-        'Worked at Tech Cog (pvt) ltd (Lahore, Pakistan) as a Fullstack developer where I developed multiple websites using Angular, ReactJS,NextJs for the frontend and Node.js,NestJs,NextJs,Graphql for the backend, focusing on responsive design and user experience.Manage and lead a team of developers to deliver high-quality software solutions on time and within budget.',
-      duration: 'Nov 2024 - Jun 2025',
-      color: '#FF6347', // Red for this card
+      icon: 'fas fa-warehouse',
+      title: 'Head of Operations – Supply Chain, Warehouse & Inventory',
+      description: 'Toyzone.pk | Elephantu.com | ISTARZ Pvt. Ltd. Directed operational lifecycle from purchasing to final-mile dispatch. Owned inventory control, warehouse governance, and 3PL negotiation.',
+      duration: 'Feb 2019 – Mar 2021',
+      links: ['https://www.toyzone.pk/', 'https://www.thestationerycompany.pk/'],
+      color: '#FF6347',
     },
+    {
+      icon: 'fas fa-users-cog',
+      title: 'Team Lead – Customer Services / HR / Floor Operations',
+      description: 'Abacus Consulting. Managed teams of 34+ agents. Produced KPI dashboards, MPRs, and performance reports. Led hiring, training, and workforce planning.',
+      duration: '2011 – 2019',
+      links: ['https://abacus-bpo.com/'],
+      color: '#4CAF50',
+    },
+    {
+      icon: 'fas fa-user-tie',
+      title: 'CRO / Administration Manager',
+      description: 'Mobilink. Supported telecom operations through high-volume data processing and customer service delivery. Managed administrative operations and SOP compliance.',
+      duration: '2006 – 2011',
+      links: ['https://mobilinkbank.com/'],
+      color: '#FFA500',
+    }
   ];
 
   educationCards = [
     {
-      title: "ICS",
-      description: "Completed ICS from Unique College Lahore, Pakistan.",
-      duration: "09/2014 - 07/2016",
-      color: "#4CAF50", // Green (or any color you prefer)
-      icon: "fa fa-graduation-cap" // or any other icon you choose
-    },
-    {
-      title: "Bachelor of Science in Software Engineering",
-      description: "Pursuing Bachelor of Science in Software Engineering at the Virtual University.",
-      duration: "09/2017 - 07/2021",
-      color: "#2196F3", // Blue (or any color you prefer)
-      icon: "fa fa-graduation-cap" // or any other icon you choose
+      title: "Bachelor of Commerce (Accounting)",
+      description: "University of the Punjab – Lahore, Pakistan.",
+      duration: "Completed",
+      color: "#2196F3",
+      icon: "fa fa-graduation-cap"
     }
   ];
 
   projectCards = [
     {
-      title: 'OSMOS',
-      description: 'A sales automation website.',
+      title: 'SLA Optimization',
+      description: 'Strengthened end-to-end coordination between buying and supply chain, improving UK retail partner delivery.',
       color: 'blue',
-      icon: 'fas fa-store',  // Add icon class here
-      duration: '05/21 - Present'
+      icon: 'fas fa-chart-line',
+      duration: 'Taskaler'
     },
     {
-      title: 'Togal ai',
-      description: 'A open ai chat modal website.',
+      title: 'Dispatch Efficiency',
+      description: 'Reduced dispatch delays through process standardisation and standard operating procedures (SOPs).',
       color: 'green',
-      icon: 'fas fa-box',  // Add icon class here
-      duration: '01/24 - 01/25 (For Client)'
+      icon: 'fas fa-shipping-fast',
+      duration: 'Toyzone.pk'
     },
     {
-      title: 'StartHub',
-      description: 'A open ai chat modal website.',
-      color: 'green',
-      icon: 'fas fa-box',  // Add icon class here
-      duration: '04/25 - Present'
-    },
-    {
-      title: 'Banglow map',
-      description: 'The website Tasking by Banglow map offers advanced geospatial monitoring and satellite imaging services.',
-      color: 'green',
-      icon: 'fas fa-box',  // Add icon class here
-      duration: '05/24 - Present'
-    },
-    {
-      title: 'Clinvise ',
-      description: 'A time tracker website.',
-      color: 'green',
-      icon: 'fas fa-box',  // Add icon class here
-      duration: '05/25 - Present (For Client)'
-    },
-    {
-      title: 'AmazonSpace UK',
-      description: 'A service website offering FBA services for sellers.',
+      title: 'Team Growth',
+      description: 'Achieved 400% increase in engagement and 50% growth in followers through strategic leadership.',
       color: 'purple',
-      icon: 'fas fa-truck',  // Add icon class here
-      duration: '07/23 - 07/24 (For Client)'
+      icon: 'fas fa-users',
+      duration: 'Abacus'
     },
     {
-      title: 'Safecares UK',
-      description: 'A website providing home care services.',
+      title: 'Audit Compliance',
+      description: 'Successfully facilitated internal and external audits with strong compliance outcomes.',
       color: 'red',
-      icon: 'fas fa-heart',  // Add icon class here
-      duration: '08/24 - 10/24 (For Client)'
-    },
-    {
-      title: 'E-commerce Website (Angular & Node.js)',
-      description: 'Developed multiple e-commerce websites using Angular for the frontend and Node.js for the backend.',
-      color: 'orange',
-      icon: 'fas fa-laptop',  // Add icon class here
-      duration: '12/2024 - Present'
-    },
-    {
-      title: 'Brain Tumor Classification Detection',
-      description: 'Developed using a fine-tuned pre-trained VGG16 model, achieving 96% accuracy.',
-      color: 'cyan',
-      icon: 'fas fa-brain',  // Add icon class here
-      duration: '07/2024 - Present'
-    },
-    {
-      title: 'Text Summarizer',
-      description: 'Fine-tuned a pre-trained BART model, achieving 50% accuracy.',
-      color: 'yellow',
-      icon: 'fas fa-text-height',  // Add icon class here
-      duration: '07/2024 - Present'
-    },
-    {
-      title: 'Shopify Project',
-      description: 'Making an e-commerce store for a client of skin care products using a paid theme.',
-      color: 'pink',
-      icon: 'fas fa-shopping-cart',  // Add icon class here
-      duration: '01/2025 - Present'
+      icon: 'fas fa-file-contract',
+      duration: 'Toyzone.pk'
     }
   ];
 
   webDevelopmentSkills = [
-    { name: 'HTML', percentage: 95, color: '#E34F26', inView: false, displayPercentage: 0 },
-    { name: 'CSS', percentage: 95, color: '#563D7C', inView: false, displayPercentage: 0 },
-    { name: 'Bootstrap', percentage: 95, color: '#1572B6', inView: false, displayPercentage: 0 },
-    { name: 'Tailwind', percentage: 95, color: '#38B2AC', inView: false, displayPercentage: 0 },
-    
-    { name: 'NextJs', percentage: 90, color: '#38B2AC', inView: false, displayPercentage: 0 },
-    { name: 'Graphql', percentage: 85, color: '#38B2AC', inView: false, displayPercentage: 0 },
-    { name: 'Node.js', percentage: 90, color: '#8CC84B', inView: false, displayPercentage: 0 },
-    { name: 'Express', percentage: 90, color: '#00ff7b', inView: false, displayPercentage: 0 },
-    { name: 'MySQL', percentage: 90, color: '#4479A1', inView: false, displayPercentage: 0 },
-    { name: 'Machine Learning', percentage: 80, color: '#8E44AD', inView: false, displayPercentage: 0 }
+    { name: 'SLA Governance', percentage: 95, color: '#E34F26', inView: true, displayPercentage: 95 },
+    { name: 'KPI Management', percentage: 95, color: '#563D7C', inView: true, displayPercentage: 95 },
+    { name: 'Supply Chain Ops', percentage: 95, color: '#1572B6', inView: true, displayPercentage: 95 },
+    { name: 'Warehousing (DC)', percentage: 95, color: '#38B2AC', inView: true, displayPercentage: 95 },
+    { name: 'PO Management', percentage: 90, color: '#8CC84B', inView: true, displayPercentage: 90 },
+    { name: 'Inventory Accuracy', percentage: 90, color: '#00ff7b', inView: true, displayPercentage: 90 },
+    { name: '3PL Coordination', percentage: 90, color: '#4479A1', inView: true, displayPercentage: 90 },
+    { name: 'Process Improvement', percentage: 85, color: '#8E44AD', inView: true, displayPercentage: 85 }
   ];
 
   graphicDesigningSkills = [
-    { name: 'UI/UX', percentage: 80, color: '#F9A825', inView: false, displayPercentage: 0 },
-    { name: 'Logo Design', percentage: 70, color: '#FF3366', inView: false, displayPercentage: 0 },
-    { name: 'Illustrations', percentage: 60, color: '#00B0FF', inView: false, displayPercentage: 0 }
+    { name: 'Advanced MS Excel', percentage: 95, color: '#F9A825', inView: true, displayPercentage: 95 },
+    { name: 'ERP Systems', percentage: 85, color: '#FF3366', inView: true, displayPercentage: 85 },
+    { name: 'Business Analytics', percentage: 80, color: '#00B0FF', inView: true, displayPercentage: 80 }
   ];
 
   socialMediaSkills = [
-    { name: 'SEO & Digital Marketing', percentage: 70, color: '#FF8C00', inView: false, displayPercentage: 0 },
-    { name: 'Content Writing', percentage: 60, color: '#6A4E23', inView: false, displayPercentage: 0 },
+    { name: 'B2B/B2C Relations', percentage: 95, color: '#FF8C00', inView: true, displayPercentage:  95 },
+    { name: 'Workforce Planning', percentage: 90, color: '#6A4E23', inView: true, displayPercentage: 90 },
   ];
 
   programmingLanguagesSkills = [
-    { name: 'Javascript', percentage: 90, color: '#F7DF1E', inView: false, displayPercentage: 0 },
-    { name: 'Typescript', percentage: 90, color: '#3178C6', inView: false, displayPercentage: 0 },
-    { name: 'Python', percentage: 80, color: '#3776AB', inView: false, displayPercentage: 0 }
+    { name: 'English', percentage: 90, color: '#F7DF1E', inView: true, displayPercentage: 90 },
+    { name: 'Urdu', percentage: 100, color: '#3178C6', inView: true, displayPercentage:  100 },
+    { name: 'Punjabi', percentage: 95, color: '#3776AB', inView: true, displayPercentage: 95 }
   ];
 
   toolsAndFrameworksSkills = [
-    { name: 'Angular', percentage: 95, color: '#DD0031', inView: false, displayPercentage: 0 },
-    { name: 'Django', percentage: 70, color: '#092E20', inView: false, displayPercentage: 0 },
-    { name: 'Adobe XD', percentage: 75, color: '#FF61F6', inView: false, displayPercentage: 0 },
-    { name: 'Figma', percentage: 80, color: '#F24E1E', inView: false, displayPercentage: 0 },
-    { name: 'Angular', percentage: 95, color: '#38B2AC', inView: false, displayPercentage: 0 },
-    { name: 'React', percentage: 90, color: '#38B2AC', inView: false, displayPercentage: 0 },
-    { name: 'NestJs', percentage: 95, color: '#38B2AC', inView: false, displayPercentage: 0 },
-    { name: 'Illustrator', percentage: 70, color: '#ff9a00', inView: false, displayPercentage: 0 },
-    { name: 'WordPress', percentage: 90, color: '#21759B', inView: false, displayPercentage: 0 },
-    { name: 'Shopify', percentage: 86, color: '#21759B', inView: false, displayPercentage: 0 },
+    { name: 'MS Word', percentage: 95, color: '#DD0031', inView: true, displayPercentage: 95 },
+    { name: 'PowerPoint', percentage: 90, color: '#092E20', inView: true, displayPercentage: 90 },
+    { name: 'Inventory Systems', percentage: 90, color: '#FF61F6', inView: true, displayPercentage: 90 },
+    { name: 'Dialer Systems', percentage: 85, color: '#F24E1E', inView: true, displayPercentage: 85 },
   ];
   certifications = [
     {
-      title: 'Python Intermediate',
-      organization: 'Sololearn',
-      date: '03/2023 - 04/2023',
-      icon: 'fa-brands fa-python', // Add relevant font-awesome icon
-      color: '#3776AB' // Python blue
+      title: 'Advanced MS Excel',
+      organization: 'Dashboards, KPI & Reporting',
+      date: 'Professional Cert',
+      icon: 'fa-solid fa-file-excel',
+      color: '#1D6F42'
     },
     {
-      title: 'Introduction to Python',
-      organization: 'Sololearn',
-      date: '03/2023 - 03/2023',
-      icon: 'fa-brands fa-python',
+      title: 'Operations & Supply Chain',
+      organization: 'Executive Training',
+      date: 'Various',
+      icon: 'fa-solid fa-truck-ramp-box',
       color: '#306998'
-    },
-    {
-      title: 'Fundamentals of Digital Marketing',
-      organization: 'Google Digital Garage',
-      date: '05/2023 - 05/2023',
-      icon: 'fa-solid fa-chart-line', // Icon for marketing or analytics
-      color: '#34A853' // Google green
     }
   ];
 
   achievements = [
     {
-      title: 'Research Paper on Brain Tumor Classification Detection',
-      description: 'Approved for presentation at the 6th International Conference on Advancements of Computational Sciences.',
-      date: '12/2024 - Present',
-      icon: 'fa-solid fa-award', // Icon for awards or achievements
-      color: '#FFD700' // Gold color
+      title: 'NPS Champion',
+      description: 'Awarded NPS Champion for 3 consecutive months for outstanding service quality.',
+      date: 'Abacus Consulting',
+      icon: 'fa-solid fa-crown',
+      color: '#FFD700'
+    },
+    {
+      title: 'Quality Guru Award',
+      description: 'Recognized for excellence in service standards and operational compliance.',
+      date: 'Multiple Times',
+      icon: 'fa-solid fa-award',
+      color: '#C0C0C0'
     }
   ];
 
