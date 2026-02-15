@@ -1,8 +1,8 @@
-<div class="flex h-screen">
+<div class="flex h-screen bg-navy-900">
     <!-- Sidebar -->
     <div class="relative">
         <!-- Hamburger Icon for Mobile -->
-        <button class="lg:hidden fixed top-4 left-4 z-20 text-white bg-[#4c4c4c91] p-2 rounded focus:outline-none z-40"
+        <button class="lg:hidden fixed top-4 left-4 z-50 text-white bg-navy-800/80 p-2 rounded-xl border border-white/10 backdrop-blur-md focus:outline-none"
             (click)="toggleSidebar()">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -12,241 +12,306 @@
 
         <!-- Sidebar -->
         <aside
-            class="side-bar w-1/4 lg:w-1/6 bg-[#1f1f1f] text-white fixed h-full flex flex-col items-center p-4 z-30 overflow-auto transform lg:translate-x-0 transition-transform duration-300"
+            class="side-bar w-1/4 lg:w-1/6 bg-navy-800/20 border-r border-white/5 backdrop-blur-3xl text-gray-300 fixed h-full flex flex-col items-center p-6 z-40 overflow-auto transform lg:translate-x-0 transition-transform duration-500 shadow-2xl shadow-black/40"
             [ngClass]="{ '-translate-x-full': !isSidebarOpen, 'translate-x-0': isSidebarOpen }">
             <!-- Profile Image -->
-            <div class="mb-8 flex flex-col justify-center items-center">
-                <img src="./assets/profile-modified.jpeg" alt="Profile"
-                    class="dp rounded-full w-[185px] h-[185px] border-4 border-gray-600 object-cover" />
-                <div class="flex justify-center flex-col items-center mt-[1rem]">
-                    <p class="text-[1.3rem] text-bold ">Kashif Hussain Alvi</p>
-                    <p class="text-[0.72rem] font-light">Operations & Administration Manager</p>
+            <div class="mb-10 flex flex-col justify-center items-center group">
+                <div class="relative p-1.5 rounded-full bg-gradient-to-tr from-electric-blue to-electric-violet shadow-2xl shadow-blue-500/10">
+                    <img src="./assets/profile-modified.jpeg" alt="Profile"
+                        class="dp rounded-full w-[150px] h-[150px] object-cover border-4 border-navy-900" />
+                </div>
+                <div class="flex justify-center flex-col items-center mt-6 space-y-1">
+                    <p class="text-xl font-bold text-white tracking-tight">Kashif Hussain Alvi</p>
+                    <p class="text-[0.65rem] font-bold text-electric-blue uppercase tracking-[0.2em] opacity-80">Strategic Operations Executive</p>
                     <div class="mt-4 flex space-x-6">
-                        <!-- LinkedIn Icon -->
                         <a href="https://www.linkedin.com/in/kashif-hussain-alvi-358357137/" target="_blank"
-                            rel="noopener noreferrer" class="text-[#e5e7eb] hover:text-blue-700 duration-700">
-                            <i class="fab fa-linkedin fa-2x"></i>
+                            rel="noopener noreferrer" class="text-gray-500 hover:text-electric-blue transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-linkedin fa-xl"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
             <!-- Navigation Tabs -->
-            <nav class="flex flex-col gap-4 w-full text-center">
-                <a href="#about"
-                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
-                    About
-                </a>
-                <a href="#expertise"
-                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
-                    Expertise
-                </a>
-
-                <a href="#education"
-                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
-                    Education
-                </a>
-                <a href="#workExperience"
-                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
-                    Work Experience
-                </a>
-                <a href="#projects"
-                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
-                    Projects
-                </a>
-                <a href="#skills"
-                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
-                    Skills
-                </a>
-                <a href="#C&A"
-                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
-                    Highlights
-                </a>
-                <a href="#hobbies-languages"
-                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
-                    Pursuits
-                </a>
-                <a href="#contact"
-                    class="hover:bg-black duration-700 py-2 px-4 rounded link-underline link-underline-black">
-                    Contact
+            <nav class="flex flex-col gap-2 w-full">
+                <a *ngFor="let item of ['About', 'Expertise', 'Education', 'Work Experience', 'Projects', 'Skills', 'Highlights', 'Pursuits', 'Contact']" 
+                   [href]="'#' + item.toLowerCase().replace(' ', '').replace('&', '')"
+                   class="w-full py-3 px-6 rounded-2xl text-xs font-semibold text-gray-400 hover:bg-white/5 hover:text-white transition-all duration-300 text-left flex items-center gap-3 group">
+                    <span class="w-1.5 h-1.5 rounded-full bg-electric-blue opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {{ item }}
                 </a>
             </nav>
         </aside>
     </div>
 
     <!-- Main Content -->
-    <main class="ml-[25%] lg:ml-[16.666%] flex-1 p-8 main-div">
-        <section class="border-b border-[#1f1f1f] relative ">
-            <div class="moving-line"></div>
-            <div class="flex flex-col lg:flex-row w-full items-center gap-16 py-20 px-8">
-                <div class="flex-1 space-y-10 banner-content">
-                    <div class="space-y-4">
-                        <h3 class="text-blue-400 text-sm font-semibold tracking-[0.3em] uppercase animate-up">Strategic Leadership</h3>
-                        <h1 class="text-6xl lg:text-8xl font-bold leading-none animate-up">
-                            Kashif Hussain <br>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-300 italic">Alvi</span>
+    <main class="flex-1 lg:ml-[16.666%] h-screen overflow-y-auto relative scroll-smooth overflow-x-hidden">
+        <!-- Floating Mesh Gradients for Depth -->
+        <div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-electric-blue/10 blur-[180px] rounded-full -z-10 animate-pulse"></div>
+        <div class="absolute bottom-[20%] right-[-10%] w-[50%] h-[50%] bg-electric-violet/10 blur-[180px] rounded-full -z-10"></div>
+
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center justify-center pt-24 pb-12 relative px-8 lg:px-20 overflow-hidden">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center w-full relative z-10">
+                <!-- Left Content -->
+                <div class="banner-content space-y-12 text-center lg:text-left">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-electric-blue/5 border border-white/5 text-electric-blue text-[10px] font-bold tracking-[0.3em] uppercase animate-up">
+                            <span class="w-2 h-2 rounded-full bg-electric-blue animate-ping"></span>
+                            Strategic Operations Executive
+                        </div>
+                        <h1 class="text-2xl lg:text-3xl font-black leading-tight animate-up tracking-tight text-white">
+                            Operations, Admin & Customer Service Leader <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-electric-violet">Guru</span>
                         </h1>
-                        <p class="text-gray-400 text-xl max-w-xl font-light leading-relaxed animate-up">
-                            Driving Operational Excellence across UK Retail Support and Supply Chain Governance with a 17+ year track record.
+                        <p class="text-xl lg:text-2xl text-gray-400 font-light max-w-xl mx-auto lg:mx-0 animate-up leading-relaxed">
+                            Building the <span class="text-white font-medium italic underline decoration-electric-blue/30 decoration-4 underline-offset-4">invisible operational architecture</span> that drives visible, hyper-scale business results.
                         </p>
                     </div>
 
                     <!-- Executive Stats Row -->
-                    <div class="flex flex-wrap gap-12 py-8 animate-up border-y border-white/5">
-                        <div class="space-y-1">
-                            <h2 class="text-5xl font-bold text-white">{{ experienceYears }}+</h2>
-                            <p class="text-gray-500 text-xs tracking-widest uppercase">Years Experience</p>
+                    <div class="grid grid-cols-3 gap-6 animate-up max-w-2xl mx-auto lg:mx-0">
+                        <div class="glass-panel p-8 rounded-[30px] group border-white/5">
+                            <h2 class="text-4xl font-bold text-white group-hover:text-electric-blue transition-colors">{{ experienceYears }}+</h2>
+                            <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-2 font-bold">Years Impact</p>
                         </div>
-                        <div class="space-y-1">
-                            <h2 class="text-5xl font-bold text-white">{{ projectsCompleted }}+</h2>
-                            <p class="text-gray-500 text-xs tracking-widest uppercase">Key Results</p>
+                        <div class="glass-panel p-8 rounded-[30px] group border-white/5">
+                            <h2 class="text-4xl font-bold text-white group-hover:text-electric-violet transition-colors">{{ growthPercentage }}%</h2>
+                            <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-2 font-bold">Growth Scale</p>
                         </div>
-                        <div class="space-y-1">
-                            <h2 class="text-5xl font-bold text-white">{{ npsScore }}%</h2>
-                            <p class="text-gray-500 text-xs tracking-widest uppercase">NPS Average</p>
+                        <div class="glass-panel p-8 rounded-[30px] group border-white/5">
+                            <h2 class="text-4xl font-bold text-white group-hover:text-electric-blue transition-colors">{{ npsChampionCount }}x</h2>
+                            <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-2 font-bold">NPS Champ</p>
                         </div>
                     </div>
 
-                    <div class="flex flex-wrap gap-6 pt-4 animate-up">
+                    <div class="flex flex-wrap gap-6 justify-center lg:justify-start pt-6 animate-up">
                         <a href="#about"
-                            class="px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-2xl font-bold transition-all duration-300 shadow-xl shadow-blue-900/40">
-                            See Portfolio
+                            class="px-10 py-5 bg-gradient-to-r from-electric-blue to-blue-600 hover:scale-105 text-white rounded-2xl font-bold transition-all duration-300 shadow-xl shadow-blue-500/20 tracking-widest text-xs uppercase">
+                            Explore Strategy
                         </a>
-                        <a href="assets/Professional Portfolio – Kashif Hussain Alvi.docx" download="Kashif-Hussain-Alvi-CV.docx"
-                            class="px-10 py-5 border-2 border-slate-800 hover:border-blue-500/50 text-slate-300 hover:text-white rounded-2xl font-bold transition-all duration-300 backdrop-blur-sm">
-                            Download CV
+                        <a href="assets/Kashif-Hussain-Alvi-CV.pdf" download
+                            class="px-10 py-5 bg-white/5 border border-white/10 hover:bg-white/10 text-white rounded-2xl font-bold transition-all duration-300 backdrop-blur-sm tracking-widest text-xs uppercase">
+                            Download PDF CV
                         </a>
                     </div>
                 </div>
 
-                <div class="flex-1 flex justify-center lg:justify-end animate-slideInRight banner-img">
+                <!-- Right Visual -->
+                <div class="hidden lg:flex justify-end animate-slideInRight relative">
                     <div class="relative group">
-                        <div class="absolute -inset-4 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full blur-3xl opacity-10 group-hover:opacity-20 transition duration-1000"></div>
-                        <div class="relative p-2 rounded-full border border-white/5 backdrop-blur-3xl">
-                            <img src="./assets/profile-modified.jpeg" class="rounded-full w-72 h-72 lg:w-[450px] lg:h-[450px] object-cover border-8 border-slate-900/50 shadow-2xl grayscale-[0.2] contrast-[1.1]">
+                        <div class="absolute -inset-10 bg-electric-blue/20 blur-[100px] opacity-50 group-hover:opacity-100 transition duration-1000"></div>
+                        <div class="relative p-3 rounded-[60px] bg-white/5 border border-white/10 backdrop-blur-3xl overflow-hidden">
+                            <img src="./assets/profile-modified.jpeg" class="rounded-[50px] w-[500px] h-[580px] object-cover contrast-[1.1] brightness-[1.1]">
+                            <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-navy-900 to-transparent"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="about" class="min-h-fit">
-            <div>
-                <h3 class="text-[1rem] mb-4 mt-4 font-light uppercase animate-up">About</h3>
-                <h1 class="text-[2rem] uppercase animate-up">Who Am I?</h1>
+        <section id="about" class="py-24 relative px-8 lg:px-20 border-t border-white/5 bg-navy-800/20">
+            <div class="max-w-4xl space-y-8 animate-up">
+                <div class="space-y-4">
+                    <h3 class="text-electric-blue text-[10px] font-bold uppercase tracking-[0.4em]">Background</h3>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white leading-tight underline decoration-electric-blue/20 decoration-8 underline-offset-8">Executive Philosophy</h2>
+                </div>
+                <div class="space-y-6 text-gray-400 text-lg lg:text-xl font-light leading-relaxed">
+                    <p class="text-justify italic border-l-2 border-electric-blue/30 pl-8">
+                        "With over 17 years of cross-functional leadership, I specialize in building the invisible architecture that drives visible business success."
+                    </p>
+                    <p class="text-justify">
+                        My expertise lies at the intersection of <span class="text-white font-medium">Backend Administration</span>—ensuring data integrity and system reliability—and <span class="text-white font-medium">Operations Management</span>, where I transform complex workflows into streamlined, high-output engines.
+                    </p>
+                    <p class="text-justify">
+                        Throughout my career, I’ve learned that the most robust backend systems are meaningless without a <span class="text-electric-blue font-bold italic">'Customer First'</span> heartbeat. By integrating Customer Service Excellence into the core of operational strategy, I’ve successfully championed NPS growth and long-term client retention for industry leaders like Toyzone.pk and IBEX.
+                    </p>
+                </div>
             </div>
-            <div>
-                <p class="text-[1.25rem] mb-6  text-justify font-light animate-up">
-                    I am an Operations and Administration Manager with over 17 years of experience supporting UK retail and e-commerce giants. My expertise spans third-party customer services, buying & merchandising support, purchase order management, and end-to-end supply chain delivery. I am recognised for my ability to manage high-volume environments through strong SLA governance and KPI-driven execution.
-                </p>
-                <p class="text-[1.25rem] text-justify font-light animate-up">
-                    Throughout my career, I have led cross-functional teams across warehousing, DC operations, and distribution. I have worked directly with international brands like Matalan, Debenhams, Very, and Secret Sales, ensuring smooth coordination between buying, fulfilment, and supply chain functions. My focus is always on process improvement, SOP compliance, and driving business impact through operational excellence.
-                </p>
-            </div>
-            <div class="mt-5">
-                <div class="cards-container">
-                    <div *ngFor="let card of cards"
-                        class="card hover:-translate-y-2 duration-700 cursor-pointer animate-up"
-                        [ngStyle]="{ 'border-bottom': '2px solid ' + card.color }">
-                        <i [class]="card.icon" [ngClass]="card.color + '-icon'" class="card-icon"></i>
-                        <h2 class="card-title">{{ card.title }}</h2>
+
+            <!-- Brand Trust Bar -->
+            <div class="mt-24 pt-16 border-t border-white/5">
+                <p class="text-[10px] text-gray-500 uppercase tracking-[0.5em] mb-12 font-bold text-center">Global Brands & Strategic Partners</p>
+                <div class="flex flex-wrap items-center justify-center gap-16 lg:gap-24 opacity-30 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-700">
+                    <div *ngFor="let logo of brandLogos" class="group relative flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-white group-hover:text-electric-blue transition-colors">
+                            <i [class]="logo.icon" class="text-xl"></i>
+                        </div>
+                        <span class="text-xs font-bold text-gray-400 group-hover:text-white uppercase tracking-widest font-mono">{{ logo.name }}</span>
                     </div>
                 </div>
-
             </div>
         </section>
-        <section class="min-h-fit hire mt-[5rem] duration-700 animate-up">
-            <div class="p-5 w-full">
-                <div>
-                    <h1 class="text-[2rem] uppercase animate-up ">Reach Out to Me</h1>
-                    <p class="text-[1.25rem] font-light mt-4 text-justify animate-up">
-                        I'm always open to discussing exciting opportunities, collaborations, and projects. Whether
-                        you're
-                        looking to create a stunning web application or need assistance with your digital presence,
-                        feel
-                        free to reach out. Let's turn your ideas into reality together.
-                    </p>
-                    <p class="text-[1.25rem] font-light mt-2 text-justify animate-up">
-                        Get in touch with me to explore how we can work together and build something amazing.
-                    </p>
-                </div>
-                <div class="mt-[2.5rem] mb-5 animate-up">
-                    <button>
-                        <a href="#contact"
-                            class="border-2 bg-black rounded-lg border-[#1f1f1f] hover:bg-[#1f1f1f] hover:border-[#00bcd9] py-5 px-[2.5rem] duration-700">Hire
-                            Me
-                        </a>
-                    </button>
-                </div>
-            </div>
-        </section>
-        <section id="expertise" class="py-24 space-y-16">
+        <section id="expertise" class="py-24 space-y-16 px-8 lg:px-20 border-t border-white/5">
             <div class="text-center space-y-4">
-                <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Core Competencies</h3>
-                <h1 class="text-4xl lg:text-6xl font-bold animate-up">Executive Expertise</h1>
-                <p class="text-gray-400 max-w-2xl mx-auto text-lg font-light animate-up">
-                    Strategically managing the end-to-end operational lifecycle for global retail leaders.
-                </p>
+                <h3 class="text-electric-blue text-[10px] font-bold tracking-[0.4em] uppercase animate-up">Specialized Governance</h3>
+                <h2 class="text-4xl lg:text-6xl font-bold text-white animate-up">Executive Expertise</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg font-light animate-up">Strategically managing the end-to-end operational lifecycle for global retail and digital brands.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div *ngFor="let card of expertiseCards" 
-                    class="experience group p-8 space-y-6 animate-up h-full">
+                    class="glass-panel group p-10 space-y-8 animate-up h-full rounded-[40px]">
                     <div class="flex items-start justify-between">
-                        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-3xl">
+                        <div class="p-5 rounded-2xl bg-white/5 border border-white/10 text-4xl text-electric-blue group-hover:scale-110 transition-transform">
                             <i [class]="card.icon"></i>
                         </div>
                     </div>
-                    <div class="space-y-3">
-                        <h2 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">{{ card.title }}</h2>
-                        <p class="text-gray-400 leading-relaxed font-light">{{ card.description }}</p>
+                    <div class="space-y-4">
+                        <h2 class="text-2xl font-bold text-white group-hover:text-electric-blue transition-colors leading-tight">{{ card.title }}</h2>
+                        <p class="text-gray-400 leading-relaxed font-light text-sm">{{ card.description }}</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="workExperience" class="py-24 space-y-16">
+        <section id="workexperience" class="py-24 space-y-16 px-8 lg:px-20 border-t border-white/5 bg-navy-800/20">
             <div class="text-center space-y-4">
-                <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Professional Journey</h3>
-                <h1 class="text-4xl lg:text-6xl font-bold animate-up">Work Experience</h1>
+                <h3 class="text-electric-violet text-[10px] font-bold tracking-[0.4em] uppercase animate-up">Operational Pillars</h3>
+                <h2 class="text-4xl lg:text-6xl font-bold text-white animate-up">Strategic Results</h2>
             </div>
 
-            <div class="space-y-12 max-w-5xl mx-auto">
-                <div *ngFor="let card of workExperienceCards" 
-                    class="pro group relative p-10 space-y-8 animate-up w-full">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                        <div class="space-y-2">
-                            <span class="text-blue-500 font-mono text-sm tracking-widest uppercase">{{ card.duration }}</span>
-                            <h2 class="text-3xl font-bold text-white">{{ card.title }}</h2>
-                        </div>
-                        <div class="flex gap-4">
-                            <a *ngFor="let link of card.links" [href]="link" target="_blank"
-                                class="p-3 rounded-full bg-slate-800/50 hover:bg-blue-600 border border-white/5 text-white transition-all duration-300">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div *ngFor="let pillar of experiencePillars" 
+                    class="glass-panel group relative p-12 space-y-8 animate-up h-full rounded-[40px] border-white/5 bg-navy-900/40">
+                    <div class="p-6 w-fit rounded-full bg-electric-violet/10 border border-electric-violet/20 text-4xl text-electric-violet group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(139,92,246,0.1)]">
+                        <i [class]="pillar.icon"></i>
+                    </div>
+                    <div class="space-y-4">
+                        <h2 class="text-2xl font-bold text-white group-hover:text-electric-violet transition-colors leading-tight">{{ pillar.title }}</h2>
+                        <p class="text-gray-400 font-light leading-relaxed text-sm">{{ pillar.description }}</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="projects" class="py-24 space-y-16">
-            <div class="text-center space-y-4">
-                <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Strategic Impacts</h3>
-                <h1 class="text-4xl lg:text-6xl font-bold animate-up">Case Studies & Results</h1>
+
+        <!-- Managed Services & Operational Solutions -->
+        <section id="services" class="py-24 space-y-20 relative overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/5 blur-[120px] rounded-full -z-10"></div>
+            
+            <div class="text-center space-y-4 px-4">
+                <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">BPO & Strategic Support</h3>
+                <h1 class="text-5xl lg:text-7xl font-bold animate-up">Managed Services & Operational Solutions</h1>
+                <p class="text-slate-500 max-w-2xl mx-auto font-light animate-up">Comprehensive backend, logistics, and customer success management for global retail and digital brands.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-                <div *ngFor="let procard of projectCards" 
-                    class="pro group p-8 space-y-6 animate-up">
-                    <div class="flex items-center gap-4">
-                        <div class="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20 text-2xl text-blue-400">
-                            <i [class]="procard.icon"></i>
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                <div *ngFor="let service of managedServices" 
+                    class="group relative p-8 rounded-[40px] bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-blue-500/20 transition-all duration-500 animate-up">
+                    
+                    <div class="space-y-6">
+                        <!-- Header -->
+                        <div class="flex items-center gap-5">
+                            <div class="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-500"
+                                [style.color]="service.color">
+                                <i [class]="service.icon"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">{{ service.title }}</h2>
                         </div>
-                        <h2 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">{{ procard.title }}</h2>
+
+                        <!-- Goal -->
+                        <div class="px-4 py-2 rounded-xl bg-blue-500/5 border border-blue-500/10">
+                            <p class="text-xs font-mono text-blue-400 uppercase tracking-tighter">The Goal: {{ service.goal }}</p>
+                        </div>
+
+                        <!-- Features -->
+                        <ul class="space-y-3">
+                            <li *ngFor="let feature of service.features" class="flex gap-3 text-slate-400 text-sm font-light leading-relaxed">
+                                <span class="text-blue-500 mt-1.5 shrink-0"><i class="fas fa-check-circle text-[10px]"></i></span>
+                                <span [innerHTML]="feature"></span>
+                            </li>
+                        </ul>
+
+                        <!-- Highlight for Buying -->
+                        <div *ngIf="service.highlight" class="pt-4 mt-4 border-t border-white/5">
+                            <p class="text-blue-300 font-bold italic text-sm">“{{ service.highlight }}”</p>
+                        </div>
                     </div>
-                    <p class="text-slate-400 font-light leading-relaxed">{{ procard.description }}</p>
-                    <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs font-mono tracking-widest uppercase text-slate-500">
-                        <span>{{ procard.duration }}</span>
-                        <span class="text-blue-500/50">Confidential Result</span>
+
+                    <!-- Decorative Hover Blob -->
+                    <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-blue-500/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Taskaler Team Solution -->
+        <section class="py-32 relative overflow-hidden">
+            <div class="absolute inset-0 bg-blue-600/5 blur-[150px] -z-10"></div>
+            <div class="max-w-4xl mx-auto text-center space-y-12 px-8">
+                <div class="space-y-4">
+                    <h3 class="text-cyan-400 text-sm font-bold tracking-[0.4em] uppercase animate-up">Collective Capability</h3>
+                    <h1 class="text-5xl lg:text-7xl font-bold animate-up">Scalable Backend Solutions via Taskaler</h1>
+                </div>
+                <div class="p-12 rounded-[40px] bg-slate-900/50 border border-white/10 backdrop-blur-3xl space-y-12 animate-up">
+                    <p class="text-2xl text-slate-300 font-light leading-relaxed italic">
+                        "I provide a 'Plug-and-Play' team for UK brands. I manage the operations while my vetted team in Pakistan handles CSR and Admin, reducing your overhead by 60% without losing quality."
+                    </p>
+                    
+                    <!-- Service Delivery Models -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 text-left">
+                        <div class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 space-y-4">
+                            <div class="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400">
+                                <i class="fas fa-user-tie text-xl"></i>
+                            </div>
+                            <div class="space-y-2">
+                                <h4 class="text-white font-bold uppercase tracking-widest text-sm">Professional Leadership</h4>
+                                <p class="text-slate-400 text-xs leading-relaxed">Direct expert management and operational governance for your existing in-house teams.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 rounded-3xl bg-blue-600/10 border border-blue-500/20 hover:border-blue-500/50 transition-all duration-300 space-y-4">
+                            <div class="w-12 h-12 rounded-2xl bg-blue-400/20 flex items-center justify-center text-blue-300">
+                                <i class="fas fa-users-cog text-xl"></i>
+                            </div>
+                            <div class="space-y-2">
+                                <h4 class="text-white font-bold uppercase tracking-widest text-sm">Full Managed Team (3rd Party)</h4>
+                                <p class="text-slate-200 text-xs leading-relaxed">End-to-end BPO solution where I recruit, train, and manage a dedicated team to handle your backend operations entirely.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 text-xs font-mono uppercase tracking-widest">Low Overhead</span>
+                        <span class="px-4 py-2 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-mono uppercase tracking-widest">High Quality</span>
+                        <span class="px-4 py-2 rounded-full bg-purple-500/10 text-purple-400 text-xs font-mono uppercase tracking-widest">Global Reach</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="py-24 space-y-20">
+            <div class="text-center space-y-4">
+                <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Timeline of Impact</h3>
+                <h1 class="text-5xl lg:text-7xl font-bold animate-up">Professional Journey</h1>
+                <p class="text-slate-500 max-w-2xl mx-auto font-light animate-up">A documented 17-year track record of scaling operations and championing customer excellence.</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto space-y-16 px-4">
+                <div *ngFor="let exp of detailedExperience; let i = index" 
+                    class="relative grid grid-cols-1 lg:grid-cols-12 gap-12 group animate-up">
+                    
+                    <!-- Decorative Timeline Line -->
+                    <div class="hidden lg:block absolute left-[5.4rem] top-0 bottom-0 w-px bg-white/5 group-last:bg-transparent"></div>
+
+                    <!-- Year/Date Column -->
+                    <div class="lg:col-span-2 flex flex-col items-center">
+                        <div class="p-4 rounded-3xl bg-slate-900 border border-white/10 text-center w-full group-hover:border-blue-500/50 transition-colors">
+                            <span class="text-xs font-mono tracking-tighter text-blue-400 uppercase">{{ exp.duration }}</span>
+                        </div>
+                        <div class="w-4 h-4 rounded-full bg-blue-500/20 border-4 border-slate-900 mt-6 hidden lg:block relative z-10 shadow-[0_0_15px_rgba(59,130,246,0.3)] group-hover:bg-blue-500 transition-colors"></div>
+                    </div>
+
+                    <!-- Experience Content Column -->
+                    <div class="lg:col-span-10 p-10 rounded-[35px] bg-white/[0.01] border border-white/5 group-hover:bg-white/[0.03] group-hover:border-blue-500/20 transition-all duration-500">
+                        <div class="space-y-6">
+                            <div class="space-y-1">
+                                <h3 class="text-blue-500 font-mono text-sm tracking-widest uppercase">{{ exp.company }}</h3>
+                                <h2 class="text-3xl font-bold text-white group-hover:text-blue-400 transition-colors">{{ exp.role }}</h2>
+                            </div>
+                            
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <li *ngFor="let point of exp.highlights" class="flex gap-3 text-slate-400 font-light text-sm leading-relaxed">
+                                    <span class="text-blue-500 mt-1.5 shrink-0"><i class="fas fa-check-circle text-[10px]"></i></span>
+                                    {{ point }}
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -260,7 +325,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 px-4">
                 <div class="space-y-10">
-                    <h2 class="text-2xl font-bold text-white/90 border-l-4 border-blue-500 pl-4 animate-up">Operations & Supply Chain</h2>
+                    <h2 class="text-2xl font-bold text-white/90 border-l-4 border-blue-500 pl-4 animate-up">Operational Strategy</h2>
                     <div class="grid gap-8">
                         <div *ngFor="let skill of webDevelopmentSkills; let i = index" 
                             class="group space-y-3 animate-up" [attr.data-index]="i">
@@ -277,7 +342,7 @@
                 </div>
 
                 <div class="space-y-10">
-                    <h2 class="text-2xl font-bold text-white/90 border-l-4 border-cyan-500 pl-4 animate-up">Professional Systems</h2>
+                    <h2 class="text-2xl font-bold text-white/90 border-l-4 border-cyan-500 pl-4 animate-up">Backend & System Admin</h2>
                     <div class="grid gap-8">
                         <div *ngFor="let skill of toolsAndFrameworksSkills; let i = index" 
                             class="group space-y-3 animate-up" [attr.data-index]="i">
@@ -294,7 +359,7 @@
                 </div>
 
                 <div class="space-y-10">
-                    <h2 class="text-2xl font-bold text-white/90 border-l-4 border-blue-400 pl-4 animate-up">Strategic Communications</h2>
+                    <h2 class="text-2xl font-bold text-white/90 border-l-4 border-blue-400 pl-4 animate-up">Customer Success & CX</h2>
                     <div class="grid gap-8">
                         <div *ngFor="let skill of communicationSkills; let i = index" 
                             class="group space-y-3 animate-up" [attr.data-index]="i">
@@ -396,62 +461,78 @@
             </div>
         </section>
 
-        <section id="contact" class="py-24">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 px-4 bg-white/5 rounded-[40px] border border-white/10 p-12 lg:p-20 overflow-hidden relative">
-                <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-blue-600/10 blur-[120px] rounded-full"></div>
-                
+        <section id="contact" class="py-24 px-8 lg:px-20 border-t border-white/5 bg-navy-900">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start overflow-hidden relative">
+                <!-- Contact Info -->
                 <div class="space-y-12 relative z-10">
-                    <div class="space-y-4">
-                        <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Get in Touch</h3>
-                        <h1 class="text-4xl lg:text-6xl font-bold animate-up">Let's Connect</h1>
-                        <p class="text-slate-400 text-lg font-light animate-up max-w-md">
-                            Open to strategic operational roles, executive leadership opportunities, and global collaborations.
+                    <div class="space-y-6">
+                        <h3 class="text-electric-blue text-[10px] font-bold tracking-[0.4em] uppercase animate-up">Get in Touch</h3>
+                        <h1 class="text-5xl lg:text-7xl font-black text-white animate-up leading-tight">Let's Connect.</h1>
+                        <p class="text-gray-400 text-lg font-light animate-up max-w-md leading-relaxed">
+                            Open to strategic operational roles, executive leadership opportunities, and global collaborations. Let's discuss how I can help you scale.
                         </p>
                     </div>
 
                     <div class="space-y-6 animate-up">
-                        <div class="flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-blue-500/30 transition-all duration-300">
-                            <div class="text-blue-500 text-2xl"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="flex items-center gap-6 p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-electric-blue/30 transition-all duration-300 group">
+                            <div class="text-electric-blue text-2xl group-hover:scale-110 transition-transform"><i class="fas fa-map-marker-alt"></i></div>
                             <div>
-                                <h4 class="text-white font-bold">Location</h4>
-                                <p class="text-slate-400 text-sm">Pakistan | Open to UK Opportunities</p>
+                                <h4 class="text-white font-bold text-sm uppercase tracking-widest">Base of Ops</h4>
+                                <p class="text-gray-400 text-sm">Pakistan | Open to UK Opportunities</p>
                             </div>
                         </div>
-                        <div class="flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-blue-500/30 transition-all duration-300">
-                            <div class="text-blue-500 text-2xl"><i class="fas fa-envelope"></i></div>
+                        <div class="flex items-center gap-6 p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-electric-blue/30 transition-all duration-300 group">
+                            <div class="text-electric-blue text-2xl group-hover:scale-110 transition-transform"><i class="fas fa-envelope"></i></div>
                             <div>
-                                <h4 class="text-white font-bold">Email</h4>
-                                <p class="text-slate-400 text-sm">kha.alvi&#64;gmail.com</p>
+                                <h4 class="text-white font-bold text-sm uppercase tracking-widest">Direct Line</h4>
+                                <p class="text-gray-400 text-sm">kha.alvi&#64;gmail.com</p>
                             </div>
+                        </div>
+
+                        <!-- CTA Row -->
+                        <div class="flex flex-wrap gap-4 pt-10">
+                            <a href="https://wa.me/923004581516" target="_blank"
+                                class="flex-1 flex items-center justify-center gap-3 px-8 py-5 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-2xl font-bold transition-all duration-300 shadow-xl shadow-green-900/20 uppercase tracking-widest text-[10px]">
+                                <i class="fab fa-whatsapp"></i>
+                                WhatsApp Me
+                            </a>
+                            <a href="assets/Kashif-Hussain-Alvi-CV.pdf" download
+                                class="flex-1 flex items-center justify-center gap-3 px-8 py-5 bg-white/5 border border-white/10 hover:bg-white/10 text-white rounded-2xl font-bold transition-all duration-300 uppercase tracking-widest text-[10px]">
+                                <i class="fas fa-file-pdf"></i>
+                                Professional CV
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="relative z-10">
+                <!-- Contact Form -->
+                <div class="glass-panel p-12 lg:p-16 rounded-[40px] border-white/5 bg-navy-800/40 relative z-10">
                     <form [formGroup]="contactForm" (ngSubmit)="send()" class="space-y-8 animate-up">
-                        <div class="grid grid-cols-1 gap-8">
-                            <div class="space-y-2">
-                                <label class="text-sm font-semibold text-slate-400 px-2 italic uppercase tracking-widest font-mono">Full Name</label>
+                        <div class="space-y-6">
+                            <div class="group space-y-2">
+                                <label class="text-[10px] font-bold text-gray-500 uppercase tracking-[0.3em] px-2 italic">Full Identity</label>
                                 <input type="text" formControlName="from_name"
-                                    class="w-full px-6 py-4 rounded-xl bg-white/5 border border-white/10 text-white focus:border-blue-500 outline-none transition-all duration-300"
+                                    class="w-full px-8 py-5 rounded-2xl bg-navy-900/50 border border-white/5 text-white focus:border-electric-blue outline-none transition-all duration-300 placeholder-gray-600"
                                     placeholder="Enter your name">
                             </div>
-                            <div class="space-y-2">
-                                <label class="text-sm font-semibold text-slate-400 px-2 italic uppercase tracking-widest font-mono">Email Address</label>
+                            <div class="group space-y-2">
+                                <label class="text-[10px] font-bold text-gray-500 uppercase tracking-[0.3em] px-2 italic">Return Address</label>
                                 <input type="email" formControlName="email"
-                                    class="w-full px-6 py-4 rounded-xl bg-white/5 border border-white/10 text-white focus:border-blue-500 outline-none transition-all duration-300"
-                                    placeholder="Enter your email">
+                                    class="w-full px-8 py-5 rounded-2xl bg-navy-900/50 border border-white/5 text-white focus:border-electric-blue outline-none transition-all duration-300 placeholder-gray-600"
+                                    placeholder="yourname@brand.com">
                             </div>
-                            <div class="space-y-2">
-                                <label class="text-sm font-semibold text-slate-400 px-2 italic uppercase tracking-widest font-mono">Message</label>
-                                <textarea formControlName="message" rows="4"
-                                    class="w-full px-6 py-4 rounded-xl bg-white/5 border border-white/10 text-white focus:border-blue-500 outline-none transition-all duration-300 resize-none"
-                                    placeholder="How can I help you?"></textarea>
+                            <div class="group space-y-2">
+                                <label class="text-[10px] font-bold text-gray-500 uppercase tracking-[0.3em] px-2 italic">Message Intent</label>
+                                <textarea formControlName="message" rows="5"
+                                    class="w-full px-8 py-5 rounded-2xl bg-navy-900/50 border border-white/5 text-white focus:border-electric-blue outline-none transition-all duration-300 resize-none placeholder-gray-600"
+                                    placeholder="How can I help you scale?"></textarea>
                             </div>
                         </div>
-                        <button type="submit" [disabled]="!contactForm.valid"
-                            class="w-full py-5 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-xl font-bold transition-all duration-300 shadow-xl shadow-blue-900/40 uppercase tracking-widest font-mono">
-                            Send Secure Message
+                        <button type="submit" [disabled]="!contactForm.valid || loading"
+                            class="btn-premium w-full flex items-center justify-center gap-3 disabled:opacity-30 disabled:cursor-not-allowed">
+                            <span *ngIf="!loading">Initialize Strategy</span>
+                            <span *ngIf="loading">Engine Firing...</span>
+                            <i class="fas fa-paper-plane text-[10px]"></i>
                         </button>
                     </form>
                 </div>

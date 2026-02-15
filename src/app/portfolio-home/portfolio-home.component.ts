@@ -52,39 +52,33 @@ export class PortfolioHomeComponent {
     }
   ];
 
-  workExperienceCards = [
+  experiencePillars = [
     {
-      icon: 'fas fa-tasks',
-      title: 'Manager – Operations & Administration',
-      description: 'Taskaler (UK Retail Support). Leading multi-functional teams for Customer Services, Buying & Merchandising (Matalan, Debenhams, Very). Managing DC, warehousing, and end-to-end supply chain coordination.',
-      duration: 'Mar 2021 – Present',
-      links: ['https://taskaler.com/'],
-      color: '#1E90FF',
+      title: 'Backend Administration',
+      description: 'Leveraging a B.Com background to maintain 100% accuracy in high-stakes environments. Expert in Daily Financial Reconciliations, Data Integrity, and complex Operational Reporting.',
+      icon: 'fa-solid fa-file-invoice-dollar',
+      color: '#2196F3'
     },
     {
-      icon: 'fas fa-warehouse',
-      title: 'Head of Operations – Supply Chain, Warehouse & Inventory',
-      description: 'Toyzone.pk | Elephantu.com | ISTARZ Pvt. Ltd. Directed operational lifecycle from purchasing to final-mile dispatch. Owned inventory control, warehouse governance, and 3PL negotiation.',
-      duration: 'Feb 2019 – Mar 2021',
-      links: ['https://www.toyzone.pk/', 'https://www.thestationerycompany.pk/'],
-      color: '#FF6347',
+      title: 'Operations & Supply Chain',
+      description: 'Expert management of end-to-end operational lifecycles. Specialized in Warehouse Coordination, 3PL negotiations, Stock Replenishment, and Amazon FBA Flow governance.',
+      icon: 'fa-solid fa-truck-ramp-box',
+      color: '#FF5722'
     },
     {
-      icon: 'fas fa-users-cog',
-      title: 'Team Lead – Customer Services / HR / Floor Operations',
-      description: 'Abacus Consulting. Managed teams of 34+ agents. Produced KPI dashboards, MPRs, and performance reports. Led hiring, training, and workforce planning.',
-      duration: '2011 – 2019',
-      links: ['https://abacus-bpo.com/'],
-      color: '#4CAF50',
-    },
-    {
-      icon: 'fas fa-user-tie',
-      title: 'CRO / Administration Manager',
-      description: 'Mobilink. Supported telecom operations through high-volume data processing and customer service delivery. Managed administrative operations and SOP compliance.',
-      duration: '2006 – 2011',
-      links: ['https://mobilinkbank.com/'],
-      color: '#FFA500',
+      title: 'Customer Excellence (CSR)',
+      description: 'Award-winning leadership in service delivery. 3x NPS Champion recognized for scaling multichannel support systems and achieving 400% engagement growth.',
+      icon: 'fa-solid fa-headset',
+      color: '#4CAF50'
     }
+  ];
+
+  brandLogos = [
+    { name: 'Abacus', icon: 'fa-solid fa-building-columns' },
+    { name: 'Mobilink', icon: 'fa-solid fa-tower-cell' },
+    { name: 'Toyzone.pk', icon: 'fa-solid fa-robot' },
+    { name: 'Matalan', icon: 'fa-solid fa-shop' },
+    { name: 'Debenhams', icon: 'fa-solid fa-bag-shopping' }
   ];
 
   educationCards = [
@@ -97,34 +91,139 @@ export class PortfolioHomeComponent {
     }
   ];
 
-  projectCards = [
+  managedServices = [
     {
-      title: 'SLA Optimization',
-      description: 'Strengthened end-to-end coordination between buying and supply chain, improving UK retail partner delivery.',
-      color: 'blue',
-      icon: 'fas fa-chart-line',
-      duration: 'Taskaler'
+      id: 'cx',
+      title: 'Customer Experience (CX) & Support Strategy',
+      goal: 'Transforming every interaction into a loyalty-building moment.',
+      icon: 'fa-solid fa-headset',
+      color: '#3b82f6',
+      features: [
+        'Omnichannel Support: Email, Live Chat, WhatsApp, and Voice.',
+        'NPS & CSAT Champion: Data-driven strategies to boost scores.',
+        'Escalation Governance: Resolution for Tier-3 technical/billing conflicts.',
+        'SOP Development: Designing the "Playbook" for consistent quality.'
+      ]
     },
     {
-      title: 'Dispatch Efficiency',
-      description: 'Reduced dispatch delays through process standardisation and standard operating procedures (SOPs).',
-      color: 'green',
-      icon: 'fas fa-shipping-fast',
-      duration: 'Toyzone.pk'
+      id: 'supply-chain',
+      title: 'Supply Chain, Warehouse & DC Operations',
+      goal: 'Ensuring the right product reaches the right customer, every time.',
+      icon: 'fa-solid fa-truck-ramp-box',
+      color: '#ef4444',
+      features: [
+        'WMS Management: Receiving, inventory slotting, and picking/packing.',
+        'DC Optimization: High-volume flow-through and dispatch coordination.',
+        'Inventory Integrity: Rigorous cycle counting and reconciliation.',
+        'Logistics Coordination: 3PL management & SLA compliance.'
+      ]
     },
     {
-      title: 'Team Growth',
-      description: 'Achieved 400% increase in engagement and 50% growth in followers through strategic leadership.',
-      color: 'purple',
-      icon: 'fas fa-users',
-      duration: 'Abacus'
+      id: 'marketplace',
+      title: 'Global 3rd Party Marketplace Management (3PM)',
+      goal: 'Seamlessly integrating your brand into the world’s largest retailers.',
+      icon: 'fa-solid fa-store',
+      color: '#f59e0b',
+      features: [
+        'Strategic Partners: Compliance for <strong>Matalan</strong>, <strong>Voga</strong>, Secret Sales, Amazon.',
+        'Platform Governance: Managed listing standards & image synchronization.',
+        'International Fulfillment: Cross-border logistics & regional compliance.'
+      ]
     },
     {
-      title: 'Audit Compliance',
-      description: 'Successfully facilitated internal and external audits with strong compliance outcomes.',
-      color: 'red',
-      icon: 'fas fa-file-contract',
-      duration: 'Toyzone.pk'
+      id: 'buying',
+      title: 'Backend Buying & Procurement Administration',
+      goal: 'Acting as the technical engine for your Buying and Merchandising teams.',
+      icon: 'fa-solid fa-database',
+      color: '#a855f7',
+      features: [
+        'System Ingestion: Raw data transformed into ERP/IMS entries.',
+        'PO Management: Precision lifecycle tracking from Draft to Received.',
+        'Master Data Management: Cleaning catalogs to prevent system errors.',
+        'Vendor Liaison: Confirming lead times and order accuracy.'
+      ],
+      highlight: 'You provide the data, we build the system.'
+    },
+    {
+      id: 'digital',
+      title: 'Digital Media & Creative Managed Services',
+      goal: 'Maintaining a cohesive, high-converting digital brand presence.',
+      icon: 'fa-solid fa-palette',
+      color: '#ec4899',
+      features: [
+        'Graphic Design Oversight: Web banners, social assets, and marketing collateral.',
+        'Digital Media Management: Posting schedules and brand engagement.',
+        'UI/UX Feedback: Bridging gap between feedback and web improvements.'
+      ]
+    },
+    {
+      id: 'finance',
+      title: 'Business Infrastructure & Financial Admin',
+      goal: 'Providing the financial and operational backbone for growth.',
+      icon: 'fa-solid fa-chart-pie',
+      color: '#10b981',
+      features: [
+        'Accounts & Finance Support: Payables/Receivables and expense tracking.',
+        'P&L Reporting: Visibility into operational costs and margins.',
+        'Process Automation: Bottenecks solved via Jira, Slack, and ERP.'
+      ]
+    }
+  ];
+
+  detailedExperience = [
+    {
+      company: 'Taskaler (Clothing Brand) – UK',
+      role: 'Operations Supply Chain Dispatch & Inventory Manager (B2B, B2C)',
+      duration: 'March 2021 – Present',
+      color: '#1E90FF',
+      highlights: [
+        'Build and execute strategic account plans delivering key business opportunities for Amazon and independent sellers.',
+        'Drive new product launches and relationship extensions by partnering with business development and onboarding teams.',
+        'Conduct deep-dive analysis and provide routine executive-level reporting on future opportunities and action plans.',
+        'Manage Amazon A-Z account operations including FBA, Product Hunting, and Drop Shipping in a fast-paced environment.',
+        'Lead and inspire teams to deliver process efficiencies and support personal development plans linked to performance.',
+        'Manage store reconciliation and daily replenishment requirements, calling out financial risks to Line Managers.'
+      ]
+    },
+    {
+      company: 'Toyzone.pk & Elephantu.com',
+      role: 'Head Of Operations Supply Chain Warehouse & Inventory',
+      duration: 'Feb 2019 – Mar 2021',
+      color: '#FF6347',
+      highlights: [
+        'Directed operational lifecycle from purchasing to final-mile dispatch, owning inventory control and warehouse governance.',
+        'Launched support operations in new geographies and drove CS forecasting/budgeting processes for multi-year growth.',
+        'Facilitated all internal and external audits/stock takes, addressing findings with proper clarification and adjustments.',
+        'Innovated tools to scale customer engagements across multiple support channels, achieving high satisfaction and efficiency.',
+        'Managed supply chain strategy, analyzing logistics data to find bottlenecks and cost-effective solutions.',
+        'Supervised facilities services, maintenance activities, and tradespersons ensuring safe and harmonious working environments.'
+      ]
+    },
+    {
+      company: 'Abacus Consulting',
+      role: 'Team Lead Customer Services / Floor Manager',
+      duration: '2011 – 2019',
+      color: '#4CAF50',
+      highlights: [
+        'Led a team of 34+ agents, managing dialer progress, KPI leakages, and daily performance reporting via MS Excel.',
+        'Conducted daily coaching and performance reviews to develop staff and improve technical skills for new hires.',
+        'Managed call center daily operations, setting targets and organizing shift patterns to ensure zero customer downtime.',
+        'Published regular reports to management suggesting new strategies for performance improvement and trend adherence.',
+        'Coordinated with multiple stakeholders for resolution of complex customer escalations and resource planning.'
+      ]
+    },
+    {
+      company: 'Mobilink',
+      role: 'Data Entry Operator / CRO / Admin Manager',
+      duration: '2006 – 2011',
+      color: '#FFA500',
+      highlights: [
+        'Managed high-volume data entry and administrative operations ensuring 100% data integrity and SOP compliance.',
+        'Assessed staff performance and provided coaching/guidance to ensure maximum efficiency in business operations.',
+        'Coordinated administrative procedures to streamline processes and monitor budgetary constraints for office supplies.',
+        'Provided top-tier phone support with a positive attitude, ensuring compliance with New Sales Activation/MNP SOPs.',
+        'Maintained complex filing systems and protected confidential customer information through regular backups.'
+      ]
     }
   ];
 
@@ -199,10 +298,10 @@ export class PortfolioHomeComponent {
 
   experienceYears: number = 0;
   targetExperience: number = 17;
-  projectsCompleted: number = 0;
-  targetProjects: number = 50; 
-  npsScore: number = 0;
-  targetNPS: number = 95;
+  growthPercentage: number = 0;
+  targetGrowth: number = 400; 
+  npsChampionCount: number = 0;
+  targetNPSChampion: number = 3;
 
   achievements = [
     {
@@ -251,6 +350,7 @@ export class PortfolioHomeComponent {
 
   isSidebarOpen = false;
   contactForm: FormGroup;
+  loading = false;
   private startTime: number | null = null;
 
   constructor(private fb: FormBuilder, private renderer: Renderer2, private el: ElementRef) {
@@ -294,8 +394,8 @@ export class PortfolioHomeComponent {
       const easedProgress = easeOutQuad(progress);
 
       this.experienceYears = Math.floor(easedProgress * this.targetExperience);
-      this.projectsCompleted = Math.floor(easedProgress * this.targetProjects);
-      this.npsScore = Math.floor(easedProgress * this.targetNPS);
+      this.growthPercentage = Math.floor(easedProgress * this.targetGrowth);
+      this.npsChampionCount = Math.floor(easedProgress * this.targetNPSChampion);
 
       if (progress < 1) {
         requestAnimationFrame(start);
@@ -310,23 +410,32 @@ export class PortfolioHomeComponent {
 
   async send() {
     if (this.contactForm.valid) {
+      // Initialize with public key
       emailjs.init("yfBukQ5y-tTdE7CWi");
+      
+      const sendButton = document.querySelector('button[type="submit"]') as HTMLButtonElement;
+      const originalText = sendButton ? sendButton.innerText : 'Send Message';
+      if (sendButton) sendButton.innerText = 'Sending...';
+
+      this.loading = true;
       try {
-        let response = await emailjs.send("service_sg6vzm6", "template_5dko6pi", {
+        await emailjs.send("service_sg6vzm6", "template_5dko6pi", {
           from_name: this.contactForm.value.from_name,
           to_name: this.contactForm.value.to_name,
-          email: this.contactForm.value.email,
+          reply_to: this.contactForm.value.email, // Kept 'email' in form but it maps to 'reply_to' in EmailJS
           message: this.contactForm.value.message,
         });
-        alert("Message has been sent");
+        alert("Message successfully delivered! I will get back to you soon.");
         this.contactForm.reset();
-        console.log(response);
       } catch (error) {
         console.error("EmailJS Error:", error);
-        alert("Failed to send message. Please try again.");
+        alert("Transmission failed. Please use direct email: kha.alvi@gmail.com");
+      } finally {
+        this.loading = false;
+        if (sendButton) sendButton.innerText = originalText;
       }
     } else {
-      alert("Please fill in all the required fields before submitting.");
+      alert("Please ensure all fields are correctly populated.");
     }
   }
 
@@ -342,11 +451,11 @@ export class PortfolioHomeComponent {
             const sectionHeader = entry.target.closest('div.space-y-10')?.querySelector('h2')?.textContent || '';
             let skillsArray: any[] = [];
 
-            if (sectionHeader.includes('Operations & Supply Chain')) {
+            if (sectionHeader.includes('Operational Strategy')) {
               skillsArray = this.webDevelopmentSkills;
-            } else if (sectionHeader.includes('Professional Systems')) {
+            } else if (sectionHeader.includes('Backend & System Admin')) {
               skillsArray = this.toolsAndFrameworksSkills;
-            } else if (sectionHeader.includes('Strategic Communications')) {
+            } else if (sectionHeader.includes('Customer Success & CX')) {
               skillsArray = this.communicationSkills;
             }
 

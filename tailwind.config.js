@@ -6,8 +6,18 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['"Playfair Display"', 'Georgia', 'serif'], // For headings
-        body: ['"Quicksand"', 'Arial', 'sans-serif'],  // For body text
+        heading: ['"Playfair Display"', 'Georgia', 'serif'],
+        body: ['"Inter"', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        navy: {
+          900: '#0B1120',
+          800: '#111827',
+        },
+        electric: {
+          blue: '#3B82F6',
+          violet: '#8B5CF6',
+        }
       },
       keyframes: {
         slideInFromLeft: {
