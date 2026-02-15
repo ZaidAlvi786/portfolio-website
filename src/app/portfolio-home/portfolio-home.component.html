@@ -112,9 +112,9 @@
                             class="px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-2xl font-bold transition-all duration-300 shadow-xl shadow-blue-900/40">
                             See Portfolio
                         </a>
-                        <a href="assets/Professional Portfolio – Kashif Hussain Alvi.docx" download="Kashif-Hussain-Alvi-CV.docx"
+                        <a href="assets/Kashif-Hussain-Alvi-CV.pdf" download
                             class="px-10 py-5 border-2 border-slate-800 hover:border-blue-500/50 text-slate-300 hover:text-white rounded-2xl font-bold transition-all duration-300 backdrop-blur-sm">
-                            Download CV
+                            Download PDF CV
                         </a>
                     </div>
                 </div>
@@ -254,25 +254,43 @@
                 </div>
             </div>
         </section>
-        <section id="projects" class="py-24 space-y-16">
+        <section id="projects" class="py-24 space-y-20">
             <div class="text-center space-y-4">
-                <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Strategic Impacts</h3>
-                <h1 class="text-4xl lg:text-6xl font-bold animate-up">Case Studies & Results</h1>
+                <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Timeline of Impact</h3>
+                <h1 class="text-5xl lg:text-7xl font-bold animate-up">Professional Journey</h1>
+                <p class="text-slate-500 max-w-2xl mx-auto font-light animate-up">A documented 17-year track record of scaling operations and championing customer excellence.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-                <div *ngFor="let procard of projectCards" 
-                    class="pro group p-8 space-y-6 animate-up">
-                    <div class="flex items-center gap-4">
-                        <div class="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20 text-2xl text-blue-400">
-                            <i [class]="procard.icon"></i>
+            <div class="max-w-6xl mx-auto space-y-16 px-4">
+                <div *ngFor="let exp of detailedExperience; let i = index" 
+                    class="relative grid grid-cols-1 lg:grid-cols-12 gap-12 group animate-up">
+                    
+                    <!-- Decorative Timeline Line -->
+                    <div class="hidden lg:block absolute left-[5.4rem] top-0 bottom-0 w-px bg-white/5 group-last:bg-transparent"></div>
+
+                    <!-- Year/Date Column -->
+                    <div class="lg:col-span-2 flex flex-col items-center">
+                        <div class="p-4 rounded-3xl bg-slate-900 border border-white/10 text-center w-full group-hover:border-blue-500/50 transition-colors">
+                            <span class="text-xs font-mono tracking-tighter text-blue-400 uppercase">{{ exp.duration }}</span>
                         </div>
-                        <h2 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">{{ procard.title }}</h2>
+                        <div class="w-4 h-4 rounded-full bg-blue-500/20 border-4 border-slate-900 mt-6 hidden lg:block relative z-10 shadow-[0_0_15px_rgba(59,130,246,0.3)] group-hover:bg-blue-500 transition-colors"></div>
                     </div>
-                    <p class="text-slate-400 font-light leading-relaxed">{{ procard.description }}</p>
-                    <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs font-mono tracking-widest uppercase text-slate-500">
-                        <span>{{ procard.duration }}</span>
-                        <span class="text-blue-500/50">Confidential Result</span>
+
+                    <!-- Experience Content Column -->
+                    <div class="lg:col-span-10 p-10 rounded-[35px] bg-white/[0.01] border border-white/5 group-hover:bg-white/[0.03] group-hover:border-blue-500/20 transition-all duration-500">
+                        <div class="space-y-6">
+                            <div class="space-y-1">
+                                <h3 class="text-blue-500 font-mono text-sm tracking-widest uppercase">{{ exp.company }}</h3>
+                                <h2 class="text-3xl font-bold text-white group-hover:text-blue-400 transition-colors">{{ exp.role }}</h2>
+                            </div>
+                            
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <li *ngFor="let point of exp.highlights" class="flex gap-3 text-slate-400 font-light text-sm leading-relaxed">
+                                    <span class="text-blue-500 mt-1.5 shrink-0"><i class="fas fa-check-circle text-[10px]"></i></span>
+                                    {{ point }}
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -458,10 +476,10 @@
                                 <i class="fab fa-whatsapp"></i>
                                 WhatsApp Me
                             </a>
-                            <a href="assets/Professional Portfolio – Kashif Hussain Alvi.docx" download
+                            <a href="assets/Kashif-Hussain-Alvi-CV.pdf" download
                                 class="flex-1 flex items-center justify-center gap-3 px-8 py-5 bg-white/5 border border-white/10 hover:border-blue-500/50 text-white rounded-2xl font-bold transition-all duration-300 uppercase tracking-widest text-sm">
                                 <i class="fas fa-file-pdf"></i>
-                                Case Study
+                                Download PDF CV
                             </a>
                         </div>
                     </div>

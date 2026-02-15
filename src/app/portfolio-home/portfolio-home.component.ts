@@ -91,34 +91,60 @@ export class PortfolioHomeComponent {
     }
   ];
 
-  projectCards = [
+  detailedExperience = [
     {
-      title: 'SLA Optimization',
-      description: 'Strengthened end-to-end coordination between buying and supply chain, improving UK retail partner delivery.',
-      color: 'blue',
-      icon: 'fas fa-chart-line',
-      duration: 'Taskaler'
+      company: 'Taskaler (Clothing Brand) – UK',
+      role: 'Operations Supply Chain Dispatch & Inventory Manager (B2B, B2C)',
+      duration: 'March 2021 – Present',
+      color: '#1E90FF',
+      highlights: [
+        'Build and execute strategic account plans delivering key business opportunities for Amazon and independent sellers.',
+        'Drive new product launches and relationship extensions by partnering with business development and onboarding teams.',
+        'Conduct deep-dive analysis and provide routine executive-level reporting on future opportunities and action plans.',
+        'Manage Amazon A-Z account operations including FBA, Product Hunting, and Drop Shipping in a fast-paced environment.',
+        'Lead and inspire teams to deliver process efficiencies and support personal development plans linked to performance.',
+        'Manage store reconciliation and daily replenishment requirements, calling out financial risks to Line Managers.'
+      ]
     },
     {
-      title: 'Dispatch Efficiency',
-      description: 'Reduced dispatch delays through process standardisation and standard operating procedures (SOPs).',
-      color: 'green',
-      icon: 'fas fa-shipping-fast',
-      duration: 'Toyzone.pk'
+      company: 'Toyzone.pk & Elephantu.com',
+      role: 'Head Of Operations Supply Chain Warehouse & Inventory',
+      duration: 'Feb 2019 – Mar 2021',
+      color: '#FF6347',
+      highlights: [
+        'Directed operational lifecycle from purchasing to final-mile dispatch, owning inventory control and warehouse governance.',
+        'Launched support operations in new geographies and drove CS forecasting/budgeting processes for multi-year growth.',
+        'Facilitated all internal and external audits/stock takes, addressing findings with proper clarification and adjustments.',
+        'Innovated tools to scale customer engagements across multiple support channels, achieving high satisfaction and efficiency.',
+        'Managed supply chain strategy, analyzing logistics data to find bottlenecks and cost-effective solutions.',
+        'Supervised facilities services, maintenance activities, and tradespersons ensuring safe and harmonious working environments.'
+      ]
     },
     {
-      title: 'Team Growth',
-      description: 'Achieved 400% increase in engagement and 50% growth in followers through strategic leadership.',
-      color: 'purple',
-      icon: 'fas fa-users',
-      duration: 'Abacus'
+      company: 'Abacus Consulting',
+      role: 'Team Lead Customer Services / Floor Manager',
+      duration: '2011 – 2019',
+      color: '#4CAF50',
+      highlights: [
+        'Led a team of 34+ agents, managing dialer progress, KPI leakages, and daily performance reporting via MS Excel.',
+        'Conducted daily coaching and performance reviews to develop staff and improve technical skills for new hires.',
+        'Managed call center daily operations, setting targets and organizing shift patterns to ensure zero customer downtime.',
+        'Published regular reports to management suggesting new strategies for performance improvement and trend adherence.',
+        'Coordinated with multiple stakeholders for resolution of complex customer escalations and resource planning.'
+      ]
     },
     {
-      title: 'Audit Compliance',
-      description: 'Successfully facilitated internal and external audits with strong compliance outcomes.',
-      color: 'red',
-      icon: 'fas fa-file-contract',
-      duration: 'Toyzone.pk'
+      company: 'Mobilink',
+      role: 'Data Entry Operator / CRO / Admin Manager',
+      duration: '2006 – 2011',
+      color: '#FFA500',
+      highlights: [
+        'Managed high-volume data entry and administrative operations ensuring 100% data integrity and SOP compliance.',
+        'Assessed staff performance and provided coaching/guidance to ensure maximum efficiency in business operations.',
+        'Coordinated administrative procedures to streamline processes and monitor budgetary constraints for office supplies.',
+        'Provided top-tier phone support with a positive attitude, ensuring compliance with New Sales Activation/MNP SOPs.',
+        'Maintained complex filing systems and protected confidential customer information through regular backups.'
+      ]
     }
   ];
 
@@ -304,23 +330,30 @@ export class PortfolioHomeComponent {
 
   async send() {
     if (this.contactForm.valid) {
+      // Initialize with public key
       emailjs.init("yfBukQ5y-tTdE7CWi");
+      
+      const sendButton = document.querySelector('button[type="submit"]') as HTMLButtonElement;
+      const originalText = sendButton ? sendButton.innerText : 'Send Message';
+      if (sendButton) sendButton.innerText = 'Sending...';
+
       try {
-        let response = await emailjs.send("service_sg6vzm6", "template_5dko6pi", {
+        await emailjs.send("service_sg6vzm6", "template_5dko6pi", {
           from_name: this.contactForm.value.from_name,
           to_name: this.contactForm.value.to_name,
           email: this.contactForm.value.email,
           message: this.contactForm.value.message,
         });
-        alert("Message has been sent");
+        alert("Message successfully delivered! I will get back to you soon.");
         this.contactForm.reset();
-        console.log(response);
       } catch (error) {
         console.error("EmailJS Error:", error);
-        alert("Failed to send message. Please try again.");
+        alert("Transmission failed. Please use direct email: kha.alvi@gmail.com");
+      } finally {
+        if (sendButton) sendButton.innerText = originalText;
       }
     } else {
-      alert("Please fill in all the required fields before submitting.");
+      alert("Please ensure all fields are correctly populated.");
     }
   }
 
