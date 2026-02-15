@@ -350,6 +350,7 @@ export class PortfolioHomeComponent {
 
   isSidebarOpen = false;
   contactForm: FormGroup;
+  loading = false;
   private startTime: number | null = null;
 
   constructor(private fb: FormBuilder, private renderer: Renderer2, private el: ElementRef) {
@@ -416,11 +417,12 @@ export class PortfolioHomeComponent {
       const originalText = sendButton ? sendButton.innerText : 'Send Message';
       if (sendButton) sendButton.innerText = 'Sending...';
 
+      this.loading = true;
       try {
         await emailjs.send("service_sg6vzm6", "template_5dko6pi", {
           from_name: this.contactForm.value.from_name,
           to_name: this.contactForm.value.to_name,
-          email: this.contactForm.value.email,
+          reply_to: this.contactForm.value.email, // Kept 'email' in form but it maps to 'reply_to' in EmailJS
           message: this.contactForm.value.message,
         });
         alert("Message successfully delivered! I will get back to you soon.");
@@ -429,6 +431,7 @@ export class PortfolioHomeComponent {
         console.error("EmailJS Error:", error);
         alert("Transmission failed. Please use direct email: kha.alvi@gmail.com");
       } finally {
+        this.loading = false;
         if (sendButton) sendButton.innerText = originalText;
       }
     } else {

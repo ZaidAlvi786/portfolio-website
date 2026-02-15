@@ -9,6 +9,16 @@ module.exports = {
         heading: ['"Playfair Display"', 'Georgia', 'serif'],
         body: ['"Inter"', 'system-ui', 'sans-serif'],
       },
+      colors: {
+        navy: {
+          900: '#0B1120',
+          800: '#111827',
+        },
+        electric: {
+          blue: '#3B82F6',
+          violet: '#8B5CF6',
+        }
+      },
       keyframes: {
         slideInFromLeft: {
           '0%': { transform: 'translateX(-100%)', opacity: '0' },
