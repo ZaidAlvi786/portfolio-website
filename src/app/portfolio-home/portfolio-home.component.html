@@ -78,31 +78,54 @@
     <main class="ml-[25%] lg:ml-[16.666%] flex-1 p-8 main-div">
         <section class="border-b border-[#1f1f1f] relative ">
             <div class="moving-line"></div>
-            <div class="flex w-[100%] justify-center items-center">
-
-                <div class="w-[50%]  animate-slideInLeft banner-content">
-                    <!-- For Font Awesome Free -->
-
-                    <div class="flex flex-col items-center justify-center">
-                        <i class="fa fa-briefcase banner-icon" style="color: #dddddd; font-size: 4rem; padding: 1rem; "></i>
-                        <h4 class="text-[0.75rem] font-light">Operations • Supply Chain • Fulfilment</h4>
+            <div class="flex flex-col lg:flex-row w-full items-center gap-16 py-20 px-8">
+                <div class="flex-1 space-y-10 banner-content">
+                    <div class="space-y-4">
+                        <h3 class="text-blue-400 text-sm font-semibold tracking-[0.3em] uppercase animate-up">Strategic Leadership</h3>
+                        <h1 class="text-6xl lg:text-8xl font-bold leading-none animate-up">
+                            Kashif Hussain <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-300 italic">Alvi</span>
+                        </h1>
+                        <p class="text-gray-400 text-xl max-w-xl font-light leading-relaxed animate-up">
+                            Driving Operational Excellence across UK Retail Support and Supply Chain Governance with a 17+ year track record.
+                        </p>
                     </div>
-                    <div class="w-full flex justify-center items-center">
-                        <div class="border-t-4 border-[#1f1f1f] my-6 mx-10 w-[20%]"></div>
+
+                    <!-- Executive Stats Row -->
+                    <div class="flex flex-wrap gap-12 py-8 animate-up border-y border-white/5">
+                        <div class="space-y-1">
+                            <h2 class="text-5xl font-bold text-white">{{ experienceYears }}+</h2>
+                            <p class="text-gray-500 text-xs tracking-widest uppercase">Years Experience</p>
+                        </div>
+                        <div class="space-y-1">
+                            <h2 class="text-5xl font-bold text-white">{{ projectsCompleted }}+</h2>
+                            <p class="text-gray-500 text-xs tracking-widest uppercase">Key Results</p>
+                        </div>
+                        <div class="space-y-1">
+                            <h2 class="text-5xl font-bold text-white">{{ npsScore }}%</h2>
+                            <p class="text-gray-500 text-xs tracking-widest uppercase">NPS Average</p>
+                        </div>
                     </div>
-                    <h1 class="text-[1.80rem] text-center">Executive Portfolio | Driving Operational Excellence</h1>
-                    <p class="text-[1.25rem] pt-4 font-light text-justify">Operations and Administration Manager with 17+ years of experience supporting UK retail and e-commerce operations. Recognised for strong SLA governance and leading cross-functional teams.</p>
-                    <div class="flex items-center justify-end gap-2 mt-3 banner-btn">
+
+                    <div class="flex flex-wrap gap-6 pt-4 animate-up">
                         <a href="#about"
-                            class="border-2 rounded-lg border-[#1f1f1f] hover:bg-[#1f1f1f] hover:border-[#00bcd9] p-4 duration-700">See
-                            Portfolio</a>
+                            class="px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-2xl font-bold transition-all duration-300 shadow-xl shadow-blue-900/40">
+                            See Portfolio
+                        </a>
                         <a href="assets/Professional Portfolio – Kashif Hussain Alvi.docx" download="Kashif-Hussain-Alvi-CV.docx"
-                            class="border-2 rounded-lg border-[#1f1f1f] hover:bg-[#1f1f1f] hover:border-[#00bcd9] p-4 duration-700">Download
-                            CV</a>
+                            class="px-10 py-5 border-2 border-slate-800 hover:border-blue-500/50 text-slate-300 hover:text-white rounded-2xl font-bold transition-all duration-300 backdrop-blur-sm">
+                            Download CV
+                        </a>
                     </div>
                 </div>
-                <div class="w-[50%] animate-slideInRight banner-img justify-end flex">
-                    <img width="50%" src="./assets/profile-modified.jpeg">
+
+                <div class="flex-1 flex justify-center lg:justify-end animate-slideInRight banner-img">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full blur-3xl opacity-10 group-hover:opacity-20 transition duration-1000"></div>
+                        <div class="relative p-2 rounded-full border border-white/5 backdrop-blur-3xl">
+                            <img src="./assets/profile-modified.jpeg" class="rounded-full w-72 h-72 lg:w-[450px] lg:h-[450px] object-cover border-8 border-slate-900/50 shadow-2xl grayscale-[0.2] contrast-[1.1]">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -156,311 +179,280 @@
                 </div>
             </div>
         </section>
-        <section id="expertise" class="min-h-fit mt-[5rem]">
-            <h3 class="text-[1rem] mb-4 mt-4 font-light animate-up">WHAT I DO?</h3>
-            <h1 class="text-[2rem] animate-up">HERE ARE SOME OF MY EXPERTISE</h1>
-            <div class="my-[2rem]">
-                <div class="expertise-container">
-                    <div *ngFor="let expertisecard of expertiseCards"
-                        class="expertise hover:-translate-y-2 duration-700 cursor-pointer animate-up"
-                        [ngStyle]="{ 'border-bottom': '2px solid ' + expertisecard.color }">
-                        <div class="hexagon" [ngStyle]="{ 'background-color': expertisecard.color }">
-                            <i [class]="expertisecard.icon" class="hex-icon"></i>
+        <section id="expertise" class="py-24 space-y-16">
+            <div class="text-center space-y-4">
+                <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Core Competencies</h3>
+                <h1 class="text-4xl lg:text-6xl font-bold animate-up">Executive Expertise</h1>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg font-light animate-up">
+                    Strategically managing the end-to-end operational lifecycle for global retail leaders.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+                <div *ngFor="let card of expertiseCards" 
+                    class="experience group p-8 space-y-6 animate-up h-full">
+                    <div class="flex items-start justify-between">
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-3xl">
+                            <i [class]="card.icon"></i>
                         </div>
-                        <h2 class="expertise-title">{{ expertisecard.title }}</h2>
-                        <p class="expertise-description">{{ expertisecard.description }}</p>
+                    </div>
+                    <div class="space-y-3">
+                        <h2 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">{{ card.title }}</h2>
+                        <p class="text-gray-400 leading-relaxed font-light">{{ card.description }}</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="education" class="min-h-fit my-[5rem]">
-            <h3 class="text-[1rem] mb-4 mt-4 font-light animate-up">EDUCATION</h3>
-            <h1 class="text-[2rem] uppercase animate-up">Qualifications & Studies</h1>
-            <div class="my-[2rem]">
-                <div class="edu-container">
-                    <div *ngFor="let educard of educationCards"
-                        class="edu hover:-translate-y-2 duration-700 cursor-pointer animate-up"
-                        [ngStyle]="{ 'border-bottom': '2px solid ' + educard.color }">
-                        <div class="hexagon" [ngStyle]="{ 'background-color': educard.color }">
-                            <i [class]="educard.icon" class="hex-icon"></i>
-                        </div>
-                        <h2 class="edu-title">{{ educard.title }}</h2>
-                        <p class="edu-description">{{ educard.description }}</p>
-                        <p class="edu-duration text-[0.875rem] text-gray-500 italic">{{ educard.duration
-                            }}</p>
-                    </div>
-                </div>
+
+        <section id="workExperience" class="py-24 space-y-16">
+            <div class="text-center space-y-4">
+                <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Professional Journey</h3>
+                <h1 class="text-4xl lg:text-6xl font-bold animate-up">Work Experience</h1>
             </div>
-        </section>
-        <section id="workExperience" class="min-h-fit my-[5rem]">
-            <h3 class="text-[1rem] my-4 font-light animate-up">WORK EXPERIENCE</h3>
-            <h1 class="text-[2rem] uppercase animate-up">My Professional Experience</h1>
-            <div class="my-[2rem]">
-                <div class="experience-container">
-                    <div *ngFor="let experiencecard of workExperienceCards"
-                        class="experience hover:-translate-y-2 duration-700 cursor-pointer animate-up"
-                        [ngStyle]="{ 'border-bottom': '2px solid ' + experiencecard.color }">
-                        <div class="hexagon" [ngStyle]="{ 'background-color': experiencecard.color }">
-                            <i [class]="experiencecard.icon" class="hex-icon"></i>
+
+            <div class="space-y-12 max-w-5xl mx-auto">
+                <div *ngFor="let card of workExperienceCards" 
+                    class="pro group relative p-10 space-y-8 animate-up w-full">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                        <div class="space-y-2">
+                            <span class="text-blue-500 font-mono text-sm tracking-widest uppercase">{{ card.duration }}</span>
+                            <h2 class="text-3xl font-bold text-white">{{ card.title }}</h2>
                         </div>
-                        <h2 class="experience-title">{{ experiencecard.title }}</h2>
-                        <p class="experience-description">{{ experiencecard.description }}</p>
-                        <p class="experience-duration text-[0.875rem] text-gray-500 italic">{{ experiencecard.duration }}</p>
-                        <div *ngIf="experiencecard.links && experiencecard.links.length > 0" class="mt-4 flex flex-wrap gap-2 justify-center">
-                            <a *ngFor="let link of experiencecard.links" [href]="link" target="_blank" class="text-blue-500 hover:text-blue-700 underline text-sm">
-                                Visit Website <i class="fas fa-external-link-alt ml-1"></i>
+                        <div class="flex gap-4">
+                            <a *ngFor="let link of card.links" [href]="link" target="_blank"
+                                class="p-3 rounded-full bg-slate-800/50 hover:bg-blue-600 border border-white/5 text-white transition-all duration-300">
+                                <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="projects" class="min-h-fit my-[5rem]">
-            <h3 class="text-[1rem] my-4 font-light animate-up">PROJECTS</h3>
-            <h1 class="text-[2rem] uppercase animate-up">Key Results & Operational Success
-            </h1>
-            <div class="my-[2rem]">
-                <div class="pro-container">
-                    <div *ngFor="let procard of projectCards"
-                        class="pro hover:-translate-y-2 duration-700 cursor-pointer animate-up"
-                        [ngStyle]="{ 'border-bottom': '2px solid ' + procard.color }">
-                        <div class="hexagon" [ngStyle]="{ 'background-color': procard.color }">
-                            <i [class]="procard.icon" class="hex-icon"></i>
+        <section id="projects" class="py-24 space-y-16">
+            <div class="text-center space-y-4">
+                <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Strategic Impacts</h3>
+                <h1 class="text-4xl lg:text-6xl font-bold animate-up">Case Studies & Results</h1>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+                <div *ngFor="let procard of projectCards" 
+                    class="pro group p-8 space-y-6 animate-up">
+                    <div class="flex items-center gap-4">
+                        <div class="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20 text-2xl text-blue-400">
+                            <i [class]="procard.icon"></i>
                         </div>
-                        <h2 class="pro-title">{{ procard.title }}</h2>
-                        <p class="pro-description">{{ procard.description }}</p>
-                        <p class="pro-duration text-[0.875rem] text-gray-500 italic">{{ procard.duration
-                            }}</p>
+                        <h2 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">{{ procard.title }}</h2>
+                    </div>
+                    <p class="text-slate-400 font-light leading-relaxed">{{ procard.description }}</p>
+                    <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs font-mono tracking-widest uppercase text-slate-500">
+                        <span>{{ procard.duration }}</span>
+                        <span class="text-blue-500/50">Confidential Result</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="min-h-fit my-[5rem]">
-            <h3 class="text-[1rem] my-4 font-light animate-up">SKILLS</h3>
-            <h1 class="text-[2rem] uppercase animate-up">Operational Skills & Efficiency</h1>
-            <div class="skills-section">
-                <h2 class="text-[1.5rem] animate-up">Core Operations & Supply Chain</h2>
-                <div class="skills-category">
-                    <div class="skill-bar animate-up" *ngFor="let skill of webDevelopmentSkills; let i = index"
-                        [attr.data-index]="i">
-                        <div class="skill-name">{{ skill.name }}</div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar-overlay" [style.width.%]="skill.inView ? skill.percentage : 0"
-                                [style.backgroundColor]="skill.color"></div>
-                        </div>
-                        <span>{{ skill.displayPercentage }}%</span>
-                    </div>
-                </div>
-
-                <h2 class="text-[1.5rem] animate-up">Data & Analytics</h2>
-                <div class="skills-category">
-                    <div class="skill-bar animate-up" *ngFor="let skill of graphicDesigningSkills; let i = index"
-                        [attr.data-index]="i">
-                        <div class="skill-name">{{ skill.name }}</div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar-overlay" [style.width.%]="skill.inView ? skill.percentage : 0"
-                                [style.backgroundColor]="skill.color"></div>
-                            <div [ngStyle]="{'background-color': skill.color}"></div>
-                        </div>
-                        <span>{{ skill.displayPercentage }}%</span>
-                    </div>
-                </div>
-
-                <h2 class="text-[1.5rem] animate-up">Service Delivery</h2>
-                <div class="skills-category">
-                    <div class="skill-bar animate-up" *ngFor="let skill of socialMediaSkills; let i = index"
-                        [attr.data-index]="i">
-                        <div class="skill-name">{{ skill.name }}</div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar-overlay" [style.width.%]="skill.inView ? skill.percentage : 0"
-                                [style.backgroundColor]="skill.color"></div>
-                            <div [ngStyle]="{'background-color': skill.color}"></div>
-                        </div>
-                        <span>{{ skill.displayPercentage }}%</span>
-                    </div>
-                </div>
-
-                <h2 class="text-[1.5rem] animate-up">Programming Languages</h2>
-                <div class="skills-category">
-                    <div class="skill-bar animate-up" *ngFor="let skill of programmingLanguagesSkills; let i = index"
-                        [attr.data-index]="i">
-                        <div class="skill-name">{{ skill.name }}</div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar-overlay" [style.width.%]="skill.inView ? skill.percentage : 0"
-                                [style.backgroundColor]="skill.color"></div>
-                            <div [ngStyle]="{'background-color': skill.color}"></div>
-                        </div>
-                        <span>{{ skill.displayPercentage }}%</span>
-                    </div>
-                </div>
-
-                <h2 class="text-[1.5rem] animate-up">Professional Systems</h2>
-                <div class="skills-category">
-                    <div class="skill-bar animate-up" *ngFor="let skill of toolsAndFrameworksSkills; let i = index"
-                        [attr.data-index]="i">
-                        <div class="skill-name">{{ skill.name }}</div>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar-overlay" [style.width.%]="skill.inView ? skill.percentage : 0"
-                                [style.backgroundColor]="skill.color"></div>
-                            <div [ngStyle]="{'background-color': skill.color}"></div>
-                        </div>
-                        <span>{{ skill.displayPercentage }}%</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="C&A" class="min-h-fit mt-[5rem]">
-            <h3 class="text-[1rem] mb-4 mt-4 font-light animate-up">HIGHLIGHTS</h3>
-            <h1 class="text-[2rem] animate-up">CERTIFICATIONS & ACHIEVEMENTS</h1>
-            <div class="my-[2rem]">
-                <h2 class="text-[1.5rem] pt-4 animate-up">Certifications</h2>
-                <div class="highlight-container mt-[3rem]">
-                    <div *ngFor="let certification of certifications"
-                        class="highlight hover:-translate-y-2 duration-700 cursor-pointer animate-up"
-                        [ngStyle]="{ 'border-bottom': '2px solid ' + certification.color }">
-                        <div class="hexagon" [ngStyle]="{ 'background-color': certification.color }">
-                            <i [class]="certification.icon" class="hex-icon"></i>
-                        </div>
-                        <h2 class="highlight-title">{{ certification.title }}</h2>
-                        <p class="highlight-description">{{ certification.organization }} ({{ certification.date }})</p>
-                    </div>
-                </div>
-                <h2 class="text-[1.5rem] pt-4 animate-up">Achievements</h2>
-                <div class="highlight-container mt-[3rem]">
-                    <div *ngFor="let achievement of achievements"
-                        class="highlight hover:-translate-y-2 duration-700 cursor-pointer animate-up"
-                        [ngStyle]="{ 'border-bottom': '2px solid ' + achievement.color }">
-                        <div class="hexagon" [ngStyle]="{ 'background-color': achievement.color }">
-                            <i [class]="achievement.icon" class="hex-icon"></i>
-                        </div>
-                        <h2 class="highlight-title">{{ achievement.title }}</h2>
-                        <p class="highlight-description">{{ achievement.description }} ({{ achievement.date }})</p>
-                    </div>
-                </div>
+        <section id="skills" class="py-24 space-y-16">
+            <div class="text-center space-y-4">
+                <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Strategic Proficiencies</h3>
+                <h1 class="text-4xl lg:text-6xl font-bold animate-up">Operational Governance</h1>
             </div>
 
-        </section>
-
-        <section id="hobbies-languages" class="min-h-fit mt-[5rem]">
-            <h3 class="text-[1rem] font-light animate-up">Hobbies & Languages</h3>
-            <h1 class="text-[2rem] uppercase animate-up">Passions and Language Proficiency</h1>
-            <div class="flex gap-10 py-4 flex-wrap animate-up">
-                <h2 class="text-[1.5rem] pt-4 ">Hobbies</h2>
-                <div class="bubble">
-                    <span class="bubble-text">Cricket</span>
-                    <div class="bubble-content">
-                        <h4>Cricket</h4>
-                        <span>Enjoy playing cricket with friends and participating in local matches. Passionate about
-                            fast
-                            bowling.</span>
-                    </div>
-                </div>
-
-                <div class="bubble">
-                    <span class="bubble-text">Operations</span>
-                    <div class="bubble-content">
-                        <h4>Retail & E-commerce</h4>
-                        <span>Keeping up with latest trends in UK retail and e-commerce operations.</span>
-                    </div>
-                </div>
-
-                <div class="bubble">
-                    <span class="bubble-text">Platforms</span>
-                    <div class="bubble-content">
-                        <h4>Digital Platforms</h4>
-                        <span>Exploring new digital tools and inventory management systems.</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex gap-10 py-4 flex-wrap animate-up">
-                <h2 class="text-[1.5rem] pt-4">Languages</h2>
-                <div class="bubble">
-                    <span class="bubble-text">English</span>
-                    <div class="bubble-content">
-                        <h4>English</h4>
-                        <span>Professional Working Proficiency. Comfortable with both written and spoken English in
-                            professional settings.</span>
-                    </div>
-                </div>
-
-                <!-- Urdu Language (Native) -->
-                <div class="bubble">
-                    <span class="bubble-text">Urdu</span>
-                    <div class="bubble-content">
-                        <h4>Urdu</h4>
-                        <span>Native Proficiency. My first language, spoken fluently.
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Punjabi Language -->
-                <div class="bubble">
-                    <span class="bubble-text">Punjabi</span>
-                    <div class="bubble-content">
-                        <h4>Punjabi</h4>
-                        <span>Fluent. Comfortable in conversational and professional contexts.
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="min-h-screen  mt-[5rem]">
-            <h3 class="text-[1rem] font-light animate-up">Contact</h3>
-            <h2 class="text-[2rem] uppercase animate-up">Ask Your Queries</h2>
-            <div
-                class="px-4 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-4 py-16 mx-auto   rounded-lg ">
-                <div class="flex flex-col justify-between">
-                    <div>
-                        <div class=" mt-8 animate-up" style="font-size: 15px;">
-                            <p>Contact us! Through emails or Phone Calls and SMS</p>
-                        </div>
-                        <div style="border-top:1px solid black; margin-top: 3rem;" style="font-size: 14px;">
-                            <div class="flex items-center py-2 mt-14 animate-up">
-                                <mat-icon class=""> location_on</mat-icon>
-                                <p class="px-2 text-gray-300 m-0">Pakistan | Open to UK Opportunities</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 px-4">
+                <div class="space-y-10">
+                    <h2 class="text-2xl font-bold text-white/90 border-l-4 border-blue-500 pl-4 animate-up">Operations & Supply Chain</h2>
+                    <div class="grid gap-8">
+                        <div *ngFor="let skill of webDevelopmentSkills; let i = index" 
+                            class="group space-y-3 animate-up" [attr.data-index]="i">
+                            <div class="flex justify-between items-end">
+                                <span class="text-lg font-medium text-slate-300 group-hover:text-blue-400 transition-colors">{{ skill.name }}</span>
+                                <span class="text-sm font-mono text-slate-500">{{ skill.displayPercentage }}%</span>
                             </div>
-                            <div class="flex items-center py-2 animate-up">
-                                <mat-icon class="">email</mat-icon>
-                                <p class="px-2 text-gray-300 mx-0">kha.alvi&#64;gmail.com</p>
-                            </div>
-                            <div class="flex items-center py-2 animate-up">
-                                <mat-icon class="">phone</mat-icon>
-                                <p class="px-2 text-gray-300 m-0">+92 300 4581516</p>
+                            <div class="h-1.5 w-full bg-slate-800/50 rounded-full overflow-hidden backdrop-blur-sm border border-white/5">
+                                <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-400 transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                                    [style.width.%]="skill.inView ? skill.percentage : 0"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <form [formGroup]="contactForm" class="animate-up">
-                        <div>
 
-                            <p for="email" class="block py-2 text-sm font-medium  dark:text-white">Full
-                                Name</p>
-                            <input type="text" name="from_name" formControlName="from_name"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="John Doe">
+                <div class="space-y-10">
+                    <h2 class="text-2xl font-bold text-white/90 border-l-4 border-cyan-500 pl-4 animate-up">Professional Systems</h2>
+                    <div class="grid gap-8">
+                        <div *ngFor="let skill of toolsAndFrameworksSkills; let i = index" 
+                            class="group space-y-3 animate-up" [attr.data-index]="i">
+                            <div class="flex justify-between items-end">
+                                <span class="text-lg font-medium text-slate-300 group-hover:text-cyan-400 transition-colors">{{ skill.name }}</span>
+                                <span class="text-sm font-mono text-slate-500">{{ skill.displayPercentage }}%</span>
+                            </div>
+                            <div class="h-1.5 w-full bg-slate-800/50 rounded-full overflow-hidden backdrop-blur-sm border border-white/5">
+                                <div class="h-full bg-gradient-to-r from-cyan-600 to-blue-400 transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(6,182,212,0.5)]"
+                                    [style.width.%]="skill.inView ? skill.percentage : 0"></div>
+                            </div>
                         </div>
-                        <div class="mt-8">
-                            <p for="email" class="block py-2 text-sm font-medium  dark:text-white">Email</p>
-                            <input type="email" name="name" formControlName="email"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="abc@gmail.com">
+                    </div>
+                </div>
+
+                <div class="space-y-10">
+                    <h2 class="text-2xl font-bold text-white/90 border-l-4 border-blue-400 pl-4 animate-up">Strategic Communications</h2>
+                    <div class="grid gap-8">
+                        <div *ngFor="let skill of communicationSkills; let i = index" 
+                            class="group space-y-3 animate-up" [attr.data-index]="i">
+                            <div class="flex justify-between items-end">
+                                <span class="text-lg font-medium text-slate-300 group-hover:text-blue-400 transition-colors">{{ skill.name }}</span>
+                                <span class="text-sm font-mono text-slate-500">{{ skill.displayPercentage }}%</span>
+                            </div>
+                            <div class="h-1.5 w-full bg-slate-800/50 rounded-full overflow-hidden backdrop-blur-sm border border-white/5">
+                                <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-400 transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                                    [style.width.%]="skill.inView ? skill.percentage : 0"></div>
+                            </div>
                         </div>
-                        <div class="mt-8">
-                            <p for="message" class="block py-2 text-sm font-medium  dark:text-white">Message</p>
-                            <textarea formControlName="message" rows="5"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="Write your message..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="C&A" class="py-24 space-y-16">
+            <div class="text-center space-y-4">
+                <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Recognition</h3>
+                <h1 class="text-4xl lg:text-6xl font-bold animate-up">Highlights & Awards</h1>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                <div *ngFor="let cert of achievements" 
+                    class="highlight group p-8 space-y-6 animate-up">
+                    <div class="p-4 w-fit rounded-2xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-white/10 text-3xl">
+                        <i [class]="cert.icon"></i>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">{{ cert.title }}</h2>
+                        <p class="text-slate-400 text-sm tracking-tight leading-relaxed">{{ cert.description }}</p>
+                        <span class="inline-block text-[10px] px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 font-bold uppercase tracking-widest font-mono">{{ cert.date }}</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="py-24 space-y-16">
+            <div class="text-center space-y-4">
+                <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Expertise</h3>
+                <h1 class="text-4xl lg:text-6xl font-bold animate-up">Professional Certifications</h1>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+                <div *ngFor="let cert of certifications" 
+                    class="highlight group p-8 space-y-6 animate-up text-center border-t border-white/5">
+                    <div class="p-6 mx-auto w-fit rounded-full bg-slate-900 border border-white/10 text-4xl mb-4 group-hover:scale-110 transition-transform">
+                        <i [class]="cert.icon" [style.color]="cert.color"></i>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-xl font-bold text-white">{{ cert.title }}</h2>
+                        <p class="text-slate-400 text-sm italic">{{ cert.organization }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies-languages" class="py-24 space-y-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 px-4">
+                <div class="space-y-10">
+                    <div class="space-y-4">
+                        <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Strategic Interests</h3>
+                        <h2 class="text-3xl font-bold text-white animate-up">Passions & Pursuits</h2>
+                    </div>
+                    <div class="flex flex-wrap gap-4 animate-up">
+                        <div class="group relative px-6 py-3 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
+                            <span class="text-lg text-slate-300 cursor-default">Cricket Fast Bowling</span>
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 p-4 w-64 rounded-xl bg-slate-900 border border-white/10 text-xs text-slate-400 opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-300 transform scale-95 group-hover:scale-100 shadow-2xl z-50">
+                                Passionate about cricket and fast bowling. Active participant in local league matches and team dynamics.
+                            </div>
                         </div>
-                        <div class="mt-8 w-full">
-                            <button (click)="send()"
-                                class="w-full border-2 rounded-lg border-[#1f1f1f] hover:bg-[#1f1f1f] hover:border-[#00bcd9] p-4 duration-700">
-                                Send Message
-                            </button>
+                        <div class="group px-6 py-3 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
+                            <span class="text-lg text-slate-300 cursor-default">E-commerce Innovation</span>
                         </div>
+                        <div class="group px-6 py-3 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
+                            <span class="text-lg text-slate-300 cursor-default">Digital Transformation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-10">
+                    <div class="space-y-4">
+                        <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Communication</h3>
+                        <h2 class="text-3xl font-bold text-white animate-up">Language Proficiency</h2>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 animate-up">
+                        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-2 group hover:border-blue-500/30 transition-all duration-300">
+                            <h3 class="text-xl font-bold text-white">English</h3>
+                            <p class="text-xs text-blue-400 uppercase tracking-widest font-bold font-mono">Professional Proficiency</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-2 group hover:border-cyan-500/30 transition-all duration-300">
+                            <h3 class="text-xl font-bold text-white">Urdu</h3>
+                            <p class="text-xs text-cyan-400 uppercase tracking-widest font-bold font-mono">Native Proficiency</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 px-4 bg-white/5 rounded-[40px] border border-white/10 p-12 lg:p-20 overflow-hidden relative">
+                <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-blue-600/10 blur-[120px] rounded-full"></div>
+                
+                <div class="space-y-12 relative z-10">
+                    <div class="space-y-4">
+                        <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Get in Touch</h3>
+                        <h1 class="text-4xl lg:text-6xl font-bold animate-up">Let's Connect</h1>
+                        <p class="text-slate-400 text-lg font-light animate-up max-w-md">
+                            Open to strategic operational roles, executive leadership opportunities, and global collaborations.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6 animate-up">
+                        <div class="flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-blue-500/30 transition-all duration-300">
+                            <div class="text-blue-500 text-2xl"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold">Location</h4>
+                                <p class="text-slate-400 text-sm">Pakistan | Open to UK Opportunities</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-blue-500/30 transition-all duration-300">
+                            <div class="text-blue-500 text-2xl"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold">Email</h4>
+                                <p class="text-slate-400 text-sm">kha.alvi&#64;gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative z-10">
+                    <form [formGroup]="contactForm" (ngSubmit)="send()" class="space-y-8 animate-up">
+                        <div class="grid grid-cols-1 gap-8">
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold text-slate-400 px-2 italic uppercase tracking-widest font-mono">Full Name</label>
+                                <input type="text" formControlName="from_name"
+                                    class="w-full px-6 py-4 rounded-xl bg-white/5 border border-white/10 text-white focus:border-blue-500 outline-none transition-all duration-300"
+                                    placeholder="Enter your name">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold text-slate-400 px-2 italic uppercase tracking-widest font-mono">Email Address</label>
+                                <input type="email" formControlName="email"
+                                    class="w-full px-6 py-4 rounded-xl bg-white/5 border border-white/10 text-white focus:border-blue-500 outline-none transition-all duration-300"
+                                    placeholder="Enter your email">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold text-slate-400 px-2 italic uppercase tracking-widest font-mono">Message</label>
+                                <textarea formControlName="message" rows="4"
+                                    class="w-full px-6 py-4 rounded-xl bg-white/5 border border-white/10 text-white focus:border-blue-500 outline-none transition-all duration-300 resize-none"
+                                    placeholder="How can I help you?"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" [disabled]="!contactForm.valid"
+                            class="w-full py-5 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-xl font-bold transition-all duration-300 shadow-xl shadow-blue-900/40 uppercase tracking-widest font-mono">
+                            Send Secure Message
+                        </button>
                     </form>
                 </div>
             </div>

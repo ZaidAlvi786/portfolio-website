@@ -129,38 +129,49 @@ export class PortfolioHomeComponent {
   ];
 
   webDevelopmentSkills = [
-    { name: 'SLA Governance', percentage: 95, color: '#E34F26', inView: true, displayPercentage: 95 },
-    { name: 'KPI Management', percentage: 95, color: '#563D7C', inView: true, displayPercentage: 95 },
-    { name: 'Supply Chain Ops', percentage: 95, color: '#1572B6', inView: true, displayPercentage: 95 },
+    { name: 'SLA Governance', percentage: 95, color: '#3b82f6', inView: true, displayPercentage: 95 },
+    { name: 'KPI Management', percentage: 95, color: '#64748b', inView: true, displayPercentage: 95 },
+    { name: 'Supply Chain Ops', percentage: 95, color: '#3178C6', inView: true, displayPercentage: 95 },
     { name: 'Warehousing (DC)', percentage: 95, color: '#38B2AC', inView: true, displayPercentage: 95 },
     { name: 'PO Management', percentage: 90, color: '#8CC84B', inView: true, displayPercentage: 90 },
-    { name: 'Inventory Accuracy', percentage: 90, color: '#00ff7b', inView: true, displayPercentage: 90 },
+    { name: 'Inventory Accuracy', percentage: 90, color: '#10b981', inView: true, displayPercentage: 90 },
     { name: '3PL Coordination', percentage: 90, color: '#4479A1', inView: true, displayPercentage: 90 },
-    { name: 'Process Improvement', percentage: 85, color: '#8E44AD', inView: true, displayPercentage: 85 }
+    { name: 'Process Improvement', percentage: 85, color: '#8b5cf6', inView: true, displayPercentage: 85 }
   ];
 
   graphicDesigningSkills = [
-    { name: 'Advanced MS Excel', percentage: 95, color: '#F9A825', inView: true, displayPercentage: 95 },
-    { name: 'ERP Systems', percentage: 85, color: '#FF3366', inView: true, displayPercentage: 85 },
-    { name: 'Business Analytics', percentage: 80, color: '#00B0FF', inView: true, displayPercentage: 80 }
+    { name: 'Advanced MS Excel', percentage: 95, color: '#f59e0b', inView: true, displayPercentage: 95 },
+    { name: 'ERP Systems', percentage: 85, color: '#ef4444', inView: true, displayPercentage: 85 },
+    { name: 'Business Analytics', percentage: 80, color: '#0ea5e9', inView: true, displayPercentage: 80 }
   ];
 
   socialMediaSkills = [
-    { name: 'B2B/B2C Relations', percentage: 95, color: '#FF8C00', inView: true, displayPercentage:  95 },
-    { name: 'Workforce Planning', percentage: 90, color: '#6A4E23', inView: true, displayPercentage: 90 },
+    { name: 'B2B/B2C Relations', percentage: 95, color: '#f97316', inView: true, displayPercentage: 95 },
+    { name: 'Workforce Planning', percentage: 90, color: '#64748b', inView: true, displayPercentage: 90 },
   ];
 
   programmingLanguagesSkills = [
-    { name: 'English', percentage: 90, color: '#F7DF1E', inView: true, displayPercentage: 90 },
-    { name: 'Urdu', percentage: 100, color: '#3178C6', inView: true, displayPercentage:  100 },
+    { name: 'English', percentage: 90, color: '#facc15', inView: true, displayPercentage: 90 },
+    { name: 'Urdu', percentage: 100, color: '#3b82f6', inView: true, displayPercentage: 100 },
     { name: 'Punjabi', percentage: 95, color: '#3776AB', inView: true, displayPercentage: 95 }
   ];
 
   toolsAndFrameworksSkills = [
-    { name: 'MS Word', percentage: 95, color: '#DD0031', inView: true, displayPercentage: 95 },
-    { name: 'PowerPoint', percentage: 90, color: '#092E20', inView: true, displayPercentage: 90 },
-    { name: 'Inventory Systems', percentage: 90, color: '#FF61F6', inView: true, displayPercentage: 90 },
-    { name: 'Dialer Systems', percentage: 85, color: '#F24E1E', inView: true, displayPercentage: 85 },
+    { name: 'Administrative Management', percentage: 95, color: '#db2777', inView: true, displayPercentage: 95 },
+    { name: 'Strategic Planning', percentage: 90, color: '#059669', inView: true, displayPercentage: 90 },
+    { name: 'Inventory Systems', percentage: 90, color: '#d946ef', inView: true, displayPercentage: 90 },
+    { name: 'Branch Administration', percentage: 95, color: '#f43f5e', inView: true, displayPercentage: 95 },
+    { name: 'Compliance & Policy', percentage: 90, color: '#3b82f6', inView: true, displayPercentage: 90 },
+    { name: 'Computer Proficiency', percentage: 95, color: '#64748b', inView: true, displayPercentage: 95 },
+  ];
+
+  communicationSkills = [
+    { name: 'Client Acquisition', percentage: 95, color: '#f97316', inView: true, displayPercentage: 95 },
+    { name: 'Commercial Development', percentage: 90, color: '#3b82f6', inView: true, displayPercentage: 90 },
+    { name: 'Complaint Management', percentage: 95, color: '#10b981', inView: true, displayPercentage: 95 },
+    { name: 'Presentation Skills', percentage: 90, color: '#8b5cf6', inView: true, displayPercentage: 90 },
+    { name: 'Client Follow-up', percentage: 95, color: '#f59e0b', inView: true, displayPercentage: 95 },
+    { name: 'Innovative Thinking', percentage: 85, color: '#6366f1', inView: true, displayPercentage: 85 },
   ];
   certifications = [
     {
@@ -171,47 +182,126 @@ export class PortfolioHomeComponent {
       color: '#1D6F42'
     },
     {
-      title: 'Operations & Supply Chain',
-      organization: 'Executive Training',
-      date: 'Various',
-      icon: 'fa-solid fa-truck-ramp-box',
-      color: '#306998'
+      title: 'MS Word Expert',
+      organization: 'Office Proficiency',
+      date: 'Certified',
+      icon: 'fa-solid fa-file-word',
+      color: '#2B579A'
+    },
+    {
+      title: 'PowerPoint Specialist',
+      organization: 'Visual Communications',
+      date: 'Certified',
+      icon: 'fa-solid fa-file-powerpoint',
+      color: '#D24726'
     }
   ];
+
+  experienceYears: number = 0;
+  targetExperience: number = 17;
+  projectsCompleted: number = 0;
+  targetProjects: number = 50; 
+  npsScore: number = 0;
+  targetNPS: number = 95;
 
   achievements = [
     {
       title: 'NPS Champion',
       description: 'Awarded NPS Champion for 3 consecutive months for outstanding service quality.',
-      date: 'Abacus Consulting',
+      date: 'Consecutive Winner',
       icon: 'fa-solid fa-crown',
       color: '#FFD700'
     },
     {
-      title: 'Quality Guru Award',
+      title: 'Team Lead of the Month',
+      description: 'Recognized for exceptional leadership and operational excellence 3 times.',
+      date: 'Triple Winner',
+      icon: 'fa-solid fa-medal',
+      color: '#3b82f6'
+    },
+    {
+      title: 'CRO of The Month',
+      description: 'Top performer in Customer Relations and Operational quality 3 times.',
+      date: 'Triple Winner',
+      icon: 'fa-solid fa-star',
+      color: '#10b981'
+    },
+    {
+      title: 'CFL Winner',
+      description: 'Champion of the Customer First League for elite service delivery.',
+      date: 'Award Winner',
+      icon: 'fa-solid fa-trophy',
+      color: '#f59e0b'
+    },
+    {
+      title: 'Team of The Month',
+      description: 'Led the highest-performing department to victory in monthly KPI rankings.',
+      date: 'Leadership Award',
+      icon: 'fa-solid fa-users-gear',
+      color: '#8b5cf6'
+    },
+    {
+      title: 'Quality Guru',
       description: 'Recognized for excellence in service standards and operational compliance.',
-      date: 'Multiple Times',
+      date: 'Subject Matter Expert',
       icon: 'fa-solid fa-award',
       color: '#C0C0C0'
     }
   ];
 
   isSidebarOpen = false;
-  contactForm: FormGroup | any;
-  constructor(private fb: FormBuilder, private renderer: Renderer2, private el: ElementRef) {
+  contactForm: FormGroup;
+  private startTime: number | null = null;
 
-    if (typeof window !== 'undefined') {
-      // Add IntersectionObserver logic only if we are on the client-side
-      this.addIntersectionObserver();
-      this.addIntersectionObserver1();
-    }
+  constructor(private fb: FormBuilder, private renderer: Renderer2, private el: ElementRef) {
     this.contactForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       from_name: ['', [Validators.required]],
       to_name: ['Portfolio'],
       message: ['', [Validators.required]],
-    })
+    });
+  }
 
+  ngOnInit() {
+    if (typeof window !== 'undefined') {
+      this.addIntersectionObserver();
+      this.addIntersectionObserver1();
+      this.initCounterObserver();
+    }
+  }
+
+  initCounterObserver() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.animateCounters();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    const heroSection = document.querySelector('.banner-content');
+    if (heroSection) observer.observe(heroSection);
+  }
+
+  animateCounters() {
+    const duration = 2000;
+    const start = (timestamp: number) => {
+      if (!this.startTime) this.startTime = timestamp;
+      const progress = Math.min((timestamp - this.startTime) / duration, 1);
+      
+      const easeOutQuad = (t: number) => t * (2 - t);
+      const easedProgress = easeOutQuad(progress);
+
+      this.experienceYears = Math.floor(easedProgress * this.targetExperience);
+      this.projectsCompleted = Math.floor(easedProgress * this.targetProjects);
+      this.npsScore = Math.floor(easedProgress * this.targetNPS);
+
+      if (progress < 1) {
+        requestAnimationFrame(start);
+      }
+    };
+    requestAnimationFrame(start);
   }
 
   toggleSidebar() {
@@ -221,21 +311,27 @@ export class PortfolioHomeComponent {
   async send() {
     if (this.contactForm.valid) {
       emailjs.init("yfBukQ5y-tTdE7CWi");
-      let response = await emailjs.send("service_sg6vzm6", "template_5dko6pi", {
-        from_name: this.contactForm.value.from_name,
-        to_name: this.contactForm.value.to_name,
-        email: this.contactForm.value.email,
-        message: this.contactForm.value.message,
-      });
-      alert("Message has been sent");
-      this.contactForm.reset();
-      console.log(response)
+      try {
+        let response = await emailjs.send("service_sg6vzm6", "template_5dko6pi", {
+          from_name: this.contactForm.value.from_name,
+          to_name: this.contactForm.value.to_name,
+          email: this.contactForm.value.email,
+          message: this.contactForm.value.message,
+        });
+        alert("Message has been sent");
+        this.contactForm.reset();
+        console.log(response);
+      } catch (error) {
+        console.error("EmailJS Error:", error);
+        alert("Failed to send message. Please try again.");
+      }
     } else {
       alert("Please fill in all the required fields before submitting.");
     }
   }
 
   addIntersectionObserver() {
+    if (typeof window === 'undefined') return;
     const sections = document.querySelectorAll('.skills-category');
 
     const observer = new IntersectionObserver(
@@ -243,23 +339,19 @@ export class PortfolioHomeComponent {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const index = Number(entry.target.getAttribute('data-index'));
+            const sectionHeader = entry.target.closest('div.space-y-10')?.querySelector('h2')?.textContent || '';
+            let skillsArray: any[] = [];
 
-            const sectionType = entry.target.closest('.skills-category')?.previousElementSibling?.textContent;
-            let skillsArray = this.webDevelopmentSkills;
-
-            if (sectionType?.includes('Graphic Designing')) {
-              skillsArray = this.graphicDesigningSkills;
-            } else if (sectionType?.includes('Social Media')) {
-              skillsArray = this.socialMediaSkills;
-            } else if (sectionType?.includes('Programming Languages')) {
-              skillsArray = this.programmingLanguagesSkills;
-            } else if (sectionType?.includes('Tools & Framework')) {
+            if (sectionHeader.includes('Operations & Supply Chain')) {
+              skillsArray = this.webDevelopmentSkills;
+            } else if (sectionHeader.includes('Professional Systems')) {
               skillsArray = this.toolsAndFrameworksSkills;
+            } else if (sectionHeader.includes('Strategic Communications')) {
+              skillsArray = this.communicationSkills;
             }
 
-            if (!skillsArray[index].inView) {
+            if (skillsArray[index] && !skillsArray[index].inView) {
               skillsArray[index].inView = true;
-
               const interval = setInterval(() => {
                 if (skillsArray[index].displayPercentage < skillsArray[index].percentage) {
                   skillsArray[index].displayPercentage++;
@@ -271,55 +363,40 @@ export class PortfolioHomeComponent {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.1 }
     );
 
     sections.forEach((section) => {
-      section.querySelectorAll('.skill-bar').forEach((skillBar) => {
+      section.querySelectorAll('.animate-up[data-index]').forEach((skillBar) => {
         observer.observe(skillBar);
       });
     });
   }
 
   addIntersectionObserver1() {
-      const elements = document.querySelectorAll('.animate-up');
+    if (typeof window === 'undefined') return;
+    const elements = document.querySelectorAll('.animate-up');
 
-      const observer = new IntersectionObserver(
-          (entries) => {
-              entries.forEach((entry, index) => {
-                  if (entry.isIntersecting) {
-                      const delay = index * 200; // Stagger animation for each card
-
-                      setTimeout(() => {
-                          entry.target.classList.add('active');
-                      }, delay);
-
-                      observer.unobserve(entry.target); // Stop observing after activation
-                  }
-              });
-          },
-          { threshold: 0.2 }
-      );
-
-      // Observe each element
-      elements.forEach((element) => observer.observe(element));
-      elements.forEach((element, index) => {
-          if (this.isElementInViewport(element)) {
-              setTimeout(() => {
-                  element.classList.add('active');
-              }, index * 50);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            const delay = index * 150; 
+            setTimeout(() => {
+              entry.target.classList.add('active');
+            }, delay);
+            observer.unobserve(entry.target);
           }
-      });
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elements.forEach((element) => observer.observe(element));
   }
 
-  // **Helper function to check if an element is in the viewport**
   isElementInViewport(el: Element): boolean {
-      const rect = el.getBoundingClientRect();
-      return rect.top < window.innerHeight && rect.bottom >= 0;
+    const rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom >= 0;
   }
-
-
-
-
 }
-
