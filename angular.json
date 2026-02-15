@@ -21,7 +21,12 @@
             "index": "src/index.html",
             "browser": "src/main.ts",
             "allowedCommonJsDependencies": [
-              "intersection-observer"
+              "intersection-observer",
+              "rxjs",
+              "@emailjs/browser"
+            ],
+            "externalDependencies": [
+              "rxjs"
             ],
             "polyfills": [
               "zone.js"
