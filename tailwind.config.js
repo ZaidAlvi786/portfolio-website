@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['"Playfair Display"', 'Georgia', 'serif'], // For headings
-        body: ['"Quicksand"', 'Arial', 'sans-serif'],  // For body text
+        heading: ['"Playfair Display"', 'Georgia', 'serif'],
+        body: ['"Inter"', 'system-ui', 'sans-serif'],
       },
       keyframes: {
         slideInFromLeft: {

@@ -81,13 +81,13 @@
             <div class="flex flex-col lg:flex-row w-full items-center gap-16 py-20 px-8">
                 <div class="flex-1 space-y-10 banner-content">
                     <div class="space-y-4">
-                        <h3 class="text-blue-400 text-sm font-semibold tracking-[0.3em] uppercase animate-up">Strategic Leadership</h3>
-                        <h1 class="text-6xl lg:text-8xl font-bold leading-none animate-up">
-                            Kashif Hussain <br>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-300 italic">Alvi</span>
+                        <h3 class="text-blue-400 text-sm font-semibold tracking-[0.3em] uppercase animate-up">Strategic Operations</h3>
+                        <h1 class="text-5xl lg:text-7xl font-bold leading-tight animate-up">
+                            Kashif Hussain Alvi | <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-300">Operations, Admin & Customer Service Leader</span>
                         </h1>
-                        <p class="text-gray-400 text-xl max-w-xl font-light leading-relaxed animate-up">
-                            Driving Operational Excellence across UK Retail Support and Supply Chain Governance with a 17+ year track record.
+                        <p class="text-gray-400 text-xl max-w-3xl font-light leading-relaxed animate-up">
+                            Specializing in scaling brands through precision backend administration and award-winning customer excellence.
                         </p>
                     </div>
 
@@ -98,12 +98,12 @@
                             <p class="text-gray-500 text-xs tracking-widest uppercase">Years Experience</p>
                         </div>
                         <div class="space-y-1">
-                            <h2 class="text-5xl font-bold text-white">{{ projectsCompleted }}+</h2>
-                            <p class="text-gray-500 text-xs tracking-widest uppercase">Key Results</p>
+                            <h2 class="text-5xl font-bold text-white">{{ growthPercentage }}%</h2>
+                            <p class="text-gray-500 text-xs tracking-widest uppercase">Engagement Growth</p>
                         </div>
                         <div class="space-y-1">
-                            <h2 class="text-5xl font-bold text-white">{{ npsScore }}%</h2>
-                            <p class="text-gray-500 text-xs tracking-widest uppercase">NPS Average</p>
+                            <h2 class="text-5xl font-bold text-white">{{ npsChampionCount }}x</h2>
+                            <p class="text-gray-500 text-xs tracking-widest uppercase">NPS Champion</p>
                         </div>
                     </div>
 
@@ -135,12 +135,22 @@
                 <h1 class="text-[2rem] uppercase animate-up">Who Am I?</h1>
             </div>
             <div>
-                <p class="text-[1.25rem] mb-6  text-justify font-light animate-up">
-                    I am an Operations and Administration Manager with over 17 years of experience supporting UK retail and e-commerce giants. My expertise spans third-party customer services, buying & merchandising support, purchase order management, and end-to-end supply chain delivery. I am recognised for my ability to manage high-volume environments through strong SLA governance and KPI-driven execution.
+                <p class="text-[1.25rem] mb-6 text-justify font-light animate-up">
+                    With over 17 years of cross-functional leadership, I specialize in building the invisible architecture that drives visible business success. My expertise lies at the intersection of Backend Administration—ensuring data integrity and system reliability—and Operations Management, where I transform complex workflows into streamlined, high-output engines.
                 </p>
                 <p class="text-[1.25rem] text-justify font-light animate-up">
-                    Throughout my career, I have led cross-functional teams across warehousing, DC operations, and distribution. I have worked directly with international brands like Matalan, Debenhams, Very, and Secret Sales, ensuring smooth coordination between buying, fulfilment, and supply chain functions. My focus is always on process improvement, SOP compliance, and driving business impact through operational excellence.
+                    Throughout my career, I’ve learned that the most robust backend systems are meaningless without a 'Customer First' heartbeat. By integrating Customer Service Excellence into the core of operational strategy, I’ve successfully championed NPS growth and long-term client retention for industry leaders like Toyzone.pk and IBEX. I don’t just manage processes; I architect environments where technology, teams, and customers thrive in sync.
                 </p>
+            </div>
+
+            <!-- Brand Trust Bar -->
+            <div class="mt-16 py-10 border-y border-white/5 animate-up">
+                <div class="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
+                    <div *ngFor="let logo of brandLogos" class="flex items-center gap-3">
+                        <i [class]="logo.icon" class="text-2xl"></i>
+                        <span class="text-sm font-mono tracking-widest uppercase">{{ logo.name }}</span>
+                    </div>
+                </div>
             </div>
             <div class="mt-5">
                 <div class="cards-container">
@@ -206,24 +216,40 @@
 
         <section id="workExperience" class="py-24 space-y-16">
             <div class="text-center space-y-4">
-                <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Professional Journey</h3>
-                <h1 class="text-4xl lg:text-6xl font-bold animate-up">Work Experience</h1>
+                <h3 class="text-blue-400 text-sm font-semibold tracking-widest uppercase animate-up">Results Pillars</h3>
+                <h1 class="text-4xl lg:text-6xl font-bold animate-up">Specialized Governance</h1>
             </div>
 
-            <div class="space-y-12 max-w-5xl mx-auto">
-                <div *ngFor="let card of workExperienceCards" 
-                    class="pro group relative p-10 space-y-8 animate-up w-full">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                        <div class="space-y-2">
-                            <span class="text-blue-500 font-mono text-sm tracking-widest uppercase">{{ card.duration }}</span>
-                            <h2 class="text-3xl font-bold text-white">{{ card.title }}</h2>
-                        </div>
-                        <div class="flex gap-4">
-                            <a *ngFor="let link of card.links" [href]="link" target="_blank"
-                                class="p-3 rounded-full bg-slate-800/50 hover:bg-blue-600 border border-white/5 text-white transition-all duration-300">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+                <div *ngFor="let pillar of experiencePillars" 
+                    class="pro group relative p-10 space-y-6 animate-up h-full border-t border-white/5 bg-white/[0.02]">
+                    <div class="p-5 w-fit rounded-2xl bg-blue-500/10 border border-blue-500/20 text-4xl text-blue-400 group-hover:scale-110 transition-transform">
+                        <i [class]="pillar.icon"></i>
+                    </div>
+                    <div class="space-y-3">
+                        <h2 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">{{ pillar.title }}</h2>
+                        <p class="text-slate-400 font-light leading-relaxed text-sm">{{ pillar.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Taskaler Team Solution -->
+        <section class="py-32 relative overflow-hidden">
+            <div class="absolute inset-0 bg-blue-600/5 blur-[150px] -z-10"></div>
+            <div class="max-w-4xl mx-auto text-center space-y-12 px-8">
+                <div class="space-y-4">
+                    <h3 class="text-cyan-400 text-sm font-bold tracking-[0.4em] uppercase animate-up">Collective Capability</h3>
+                    <h1 class="text-5xl lg:text-7xl font-bold animate-up">Scalable Backend Solutions via Taskaler</h1>
+                </div>
+                <div class="p-12 rounded-[40px] bg-slate-900/50 border border-white/10 backdrop-blur-3xl space-y-8 animate-up">
+                    <p class="text-2xl text-slate-300 font-light leading-relaxed italic">
+                        "I provide a 'Plug-and-Play' team for UK brands. I manage the operations while my vetted team in Pakistan handles CSR and Admin, reducing your overhead by 60% without losing quality."
+                    </p>
+                    <div class="flex justify-center gap-4">
+                        <span class="px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 text-xs font-mono uppercase tracking-widest">Low Overhead</span>
+                        <span class="px-4 py-2 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-mono uppercase tracking-widest">High Quality</span>
+                        <span class="px-4 py-2 rounded-full bg-purple-500/10 text-purple-400 text-xs font-mono uppercase tracking-widest">Global Reach</span>
                     </div>
                 </div>
             </div>
@@ -260,7 +286,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 px-4">
                 <div class="space-y-10">
-                    <h2 class="text-2xl font-bold text-white/90 border-l-4 border-blue-500 pl-4 animate-up">Operations & Supply Chain</h2>
+                    <h2 class="text-2xl font-bold text-white/90 border-l-4 border-blue-500 pl-4 animate-up">Operational Strategy</h2>
                     <div class="grid gap-8">
                         <div *ngFor="let skill of webDevelopmentSkills; let i = index" 
                             class="group space-y-3 animate-up" [attr.data-index]="i">
@@ -277,7 +303,7 @@
                 </div>
 
                 <div class="space-y-10">
-                    <h2 class="text-2xl font-bold text-white/90 border-l-4 border-cyan-500 pl-4 animate-up">Professional Systems</h2>
+                    <h2 class="text-2xl font-bold text-white/90 border-l-4 border-cyan-500 pl-4 animate-up">Backend & System Admin</h2>
                     <div class="grid gap-8">
                         <div *ngFor="let skill of toolsAndFrameworksSkills; let i = index" 
                             class="group space-y-3 animate-up" [attr.data-index]="i">
@@ -294,7 +320,7 @@
                 </div>
 
                 <div class="space-y-10">
-                    <h2 class="text-2xl font-bold text-white/90 border-l-4 border-blue-400 pl-4 animate-up">Strategic Communications</h2>
+                    <h2 class="text-2xl font-bold text-white/90 border-l-4 border-blue-400 pl-4 animate-up">Customer Success & CX</h2>
                     <div class="grid gap-8">
                         <div *ngFor="let skill of communicationSkills; let i = index" 
                             class="group space-y-3 animate-up" [attr.data-index]="i">
@@ -423,6 +449,20 @@
                                 <h4 class="text-white font-bold">Email</h4>
                                 <p class="text-slate-400 text-sm">kha.alvi&#64;gmail.com</p>
                             </div>
+                        </div>
+
+                        <!-- Quality Guru CTAs -->
+                        <div class="flex flex-wrap gap-4 pt-8">
+                            <a href="https://wa.me/923004443915" target="_blank"
+                                class="flex-1 flex items-center justify-center gap-3 px-8 py-5 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-2xl font-bold transition-all duration-300 shadow-xl shadow-green-900/20 uppercase tracking-widest text-sm">
+                                <i class="fab fa-whatsapp"></i>
+                                WhatsApp Me
+                            </a>
+                            <a href="assets/Professional Portfolio – Kashif Hussain Alvi.docx" download
+                                class="flex-1 flex items-center justify-center gap-3 px-8 py-5 bg-white/5 border border-white/10 hover:border-blue-500/50 text-white rounded-2xl font-bold transition-all duration-300 uppercase tracking-widest text-sm">
+                                <i class="fas fa-file-pdf"></i>
+                                Case Study
+                            </a>
                         </div>
                     </div>
                 </div>
