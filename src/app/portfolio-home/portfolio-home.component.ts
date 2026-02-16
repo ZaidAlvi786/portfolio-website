@@ -41,7 +41,7 @@ export class PortfolioHomeComponent {
     {
       icon: 'fa-solid fa-cart-shopping',
       title: 'Buying & Merchandising',
-      description: 'Expert support in product setup, PO management, and quantity validation for major UK retailers like Matalan and Debenhams.',
+      description: 'Expert support in product setup, PO management, and quantity validation for major UK retailers like The stationery Company Text and Taskaler.',
       color: '#FFEB3B'
     },
     {
@@ -77,8 +77,8 @@ export class PortfolioHomeComponent {
     { name: 'Abacus', icon: 'fa-solid fa-building-columns' },
     { name: 'Mobilink', icon: 'fa-solid fa-tower-cell' },
     { name: 'Toyzone.pk', icon: 'fa-solid fa-robot' },
-    { name: 'Matalan', icon: 'fa-solid fa-shop' },
-    { name: 'Debenhams', icon: 'fa-solid fa-bag-shopping' }
+    { name: 'The stationery Company Text', icon: 'fa-solid fa-shop' },
+    { name: 'Taskaler', icon: 'fa-solid fa-bag-shopping' }
   ];
 
   educationCards = [
@@ -125,7 +125,7 @@ export class PortfolioHomeComponent {
       icon: 'fa-solid fa-store',
       color: '#f59e0b',
       features: [
-        'Strategic Partners: Compliance for <strong>Matalan</strong>, <strong>Voga</strong>, Secret Sales, Amazon.',
+        'Strategic Partners: Compliance for <strong>The stationery Company Text</strong>, <strong>Voga</strong>, Secret Sales, Amazon.',
         'Platform Governance: Managed listing standards & image synchronization.',
         'International Fulfillment: Cross-border logistics & regional compliance.'
       ]
